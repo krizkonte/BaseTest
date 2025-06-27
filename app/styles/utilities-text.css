@@ -1,0 +1,163 @@
+@layer utilities {
+  /* On Neutral */
+  .text-on-surface-strong {
+    color: oklch(var(--neutral-900) / var(--opacity-90));
+  }
+  .text-on-surface {
+    color: oklch(var(--neutral-950) / var(--opacity-70));
+  }
+  .text-on-surface-weak {
+    color: oklch(var(--neutral-900) / var(--opacity-60));
+  }
+  .text-on-surface-disabled {
+    color: oklch(var(--neutral-500) / var(--opacity-90));
+  }
+  .text-on-surface-link {
+    color: oklch(var(--brand-600));
+    cursor: pointer;
+  }
+  .text-on-surface-link:hover {
+    color: oklch(var(--brand-400));
+    text-decoration: underline;
+  }
+  .text-on-surface-link:active {
+    color: oklch(var(--brand-700));
+  }
+  .text-on-surface-link:visited {
+    color: oklch(var(--brand-700));
+  }
+  .text-on-surface-danger {
+    color: oklch(var(--danger-700));
+  }
+  .text-on-surface-warning {
+    color: oklch(var(--warning-600));
+  }
+  .text-on-surface-success {
+    color: oklch(var(--success-600));
+  }
+  .text-on-surface-info {
+    color: oklch(var(--info-600));
+  }
+
+  /* On Disabled */
+  .text-on-disabled {
+    color: oklch(var(--neutral-600) / var(--opacity-90));
+  }
+
+  /* On Inverted */
+  .text-on-inverted {
+    color: oklch(var(--white));
+  }
+  .text-on-inverted-weak {
+    color: oklch(var(--white) / var(--opacity-70));
+  }
+  .text-on-inverted-disabled {
+    color: oklch(var(--white) / var(--opacity-50));
+  }
+  .text-on-inverted-link {
+    color: oklch(var(--brand-300));
+    cursor: pointer;
+  }
+  .text-on-inverted-link:hover {
+    color: oklch(var(--brand-200));
+    text-decoration: underline;
+  }
+  .text-on-inverted-link:active {
+    color: oklch(var(--brand-400));
+  }
+  .text-on-inverted-link:visited {
+    color: oklch(var(--info-400));
+  }
+  .text-on-inverted-danger {
+    color: oklch(var(--danger-400));
+  }
+  .text-on-inverted-warning {
+    color: oklch(var(--warning-200));
+  }
+  .text-on-inverted-success {
+    color: oklch(var(--success-300));
+  }
+  .text-on-inverted-info {
+    color: oklch(var(--info-300));
+  }
+
+  /* On Accent */
+
+  .text-on-accent {
+    color: oklch(var(--white));
+  }
+  .text-on-accent-danger {
+    color: oklch(var(--white));
+  }
+  .text-on-accent-warning {
+    color: oklch(var(--black) / var(--opacity-90));
+  }
+  .text-on-accent-success {
+    color: oklch(var(--white));
+  }
+  .text-on-accent-info {
+    color: oklch(var(--white));
+  }
+
+  /* On Subtle */
+
+  .text-on-subtle {
+    color: oklch(var(--brand-900) / var(--opacity-80));
+  }
+  .text-on-subtle-danger {
+    color: oklch(var(--danger-900) / var(--opacity-80));
+  }
+  .text-on-subtle-warning {
+    color: oklch(var(--warning-800) / var(--opacity-90));
+  }
+  .text-on-subtle-success {
+    color: oklch(var(--success-900) / var(--opacity-80));
+  }
+  .text-on-subtle-info {
+    color: oklch(var(--info-900) / var(--opacity-80));
+  }
+
+  /* On Danger */
+  .text-danger-pressed {
+    color: oklch(var(--danger-900) / var(--opacity-80));
+  }
+  .text-danger {
+    color: oklch(var(--danger-700) / var(--opacity-80));
+  }
+  .text-danger-hover {
+    color: oklch(var(--danger-500) / var(--opacity-80));
+  }
+
+  /* On Warning */
+  .text-warning-pressed {
+    color: oklch(var(--warning-700) / var(--opacity-80));
+  }
+  .text-warning {
+    color: oklch(var(--warning-600) / var(--opacity-80));
+  }
+  .text-warning-hover {
+    color: oklch(var(--warning-500) / var(--opacity-80));
+  }
+
+  /* On Success */
+  .text-success-pressed {
+    color: oklch(var(--success-900) / var(--opacity-80));
+  }
+  .text-success {
+    color: oklch(var(--success-700) / var(--opacity-80));
+  }
+  .text-success-hover {
+    color: oklch(var(--success-500) / var(--opacity-80));
+  }
+
+  /* On Info */
+  .text-info-pressed {
+    color: oklch(var(--info-900) / var(--opacity-80));
+  }
+  .text-info {
+    color: oklch(var(--info-700) / var(--opacity-80));
+  }
+  .text-info-hover {
+    color: oklch(var(--info-500) / var(--opacity-80));
+  }
+}

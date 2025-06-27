@@ -1,0 +1,191 @@
+@layer utilities {
+  /* Neutral */
+  .bg-canvas {
+    background-color: oklch(var(--neutral-200));
+  }
+  .bg-surface {
+    background-color: oklch(var(--neutral-50));
+  }
+  .bg-surface-high {
+    background-color: oklch(var(--white));
+  }
+  .bg-surface-low {
+    background-color: oklch(var(--neutral-100));
+  }
+  .bg-disabled {
+    background-color: oklch(var(--neutral-300) / var(--opacity-60));
+  }
+  .bg-inverted {
+    background-color: oklch(var(--neutral-900));
+  }
+
+  /* Accent */
+  .bg-accent {
+    background-color: oklch(var(--brand-700));
+  }
+  .bg-accent-danger {
+    background-color: oklch(var(--danger-700));
+  }
+  .bg-accent-warning {
+    background-color: oklch(var(--warning-500));
+  }
+  .bg-accent-success {
+    background-color: oklch(var(--success-600));
+  }
+  .bg-accent-info {
+    background-color: oklch(var(--info-600));
+  }
+
+  /* Subtle */
+  .bg-subtle {
+    background-color: oklch(var(--brand-100) / var(--opacity-70));
+  }
+  .bg-subtle-danger {
+    background-color: oklch(var(--danger-100) / var(--opacity-30));
+  }
+  .bg-subtle-warning {
+    background-color: oklch(var(--warning-100) / var(--opacity-30));
+  }
+  .bg-subtle-success {
+    background-color: oklch(var(--success-100) / var(--opacity-30));
+  }
+  .bg-subtle-info {
+    background-color: oklch(var(--info-100) / var(--opacity-30));
+  }
+
+  /* Interactive */
+  .bg-interactive-accent {
+    background-color: oklch(var(--brand-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-accent:hover {
+    background-color: oklch(var(--brand-700) / var(--opacity-80));
+    box-shadow: var(--shadow-accent-hover);
+  }
+  .bg-interactive-accent:active {
+    background-color: oklch(var(--brand-800));
+    box-shadow: none;
+  }
+
+  .bg-interactive-accent-danger {
+    background-color: oklch(var(--danger-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-accent-danger:hover {
+    background-color: oklch(var(--danger-700) / var(--opacity-80));
+    box-shadow: var(--shadow-accent-hover);
+  }
+  .bg-interactive-accent-danger:active {
+    background-color: oklch(var(--danger-800));
+    box-shadow: none;
+  }
+
+  .bg-interactive-accent-warning {
+    background-color: oklch(var(--warning-500));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-accent-warning:hover {
+    background-color: oklch(var(--warning-400) / var(--opacity-80));
+    box-shadow: var(--shadow-accent-hover);
+  }
+  .bg-interactive-accent-warning:active {
+    background-color: oklch(var(--warning-600));
+    box-shadow: none;
+  }
+
+  .bg-interactive-accent-success {
+    background-color: oklch(var(--success-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-accent-success:hover {
+    background-color: oklch(var(--success-700) / var(--opacity-80));
+    box-shadow: var(--shadow-accent-hover);
+  }
+  .bg-interactive-accent-success:active {
+    background-color: oklch(var(--success-800));
+    box-shadow: none;
+  }
+
+  .bg-interactive-accent-info {
+    background-color: oklch(var(--info-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-accent-info:hover {
+    background-color: oklch(var(--info-700) / var(--opacity-80));
+    box-shadow: var(--shadow-accent-hover);
+  }
+  .bg-interactive-accent-info:active {
+    background-color: oklch(var(--info-800));
+    box-shadow: none;
+  }
+
+  .bg-interactive-subtle {
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-subtle:hover {
+    background-color: oklch(var(--brand-100));
+    box-shadow: var(--shadow-subtle-hover);
+  }
+  .bg-interactive-subtle:active {
+    background-color: oklch(var(--brand-200));
+    box-shadow: none;
+  }
+
+  .bg-interactive-subtle-danger {
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-subtle-danger:hover {
+    background-color: oklch(var(--danger-50));
+    box-shadow: var(--shadow-subtle-hover);
+  }
+  .bg-interactive-subtle-danger:active {
+    background-color: oklch(var(--danger-200));
+    box-shadow: none;
+  }
+
+  .bg-interactive-subtle-warning {
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-subtle-warning:hover {
+    background-color: oklch(var(--warning-50));
+    box-shadow: var(--shadow-subtle-hover);
+  }
+  .bg-interactive-subtle-warning:active {
+    background-color: oklch(var(--warning-200));
+    box-shadow: none;
+  }
+
+  .bg-interactive-subtle-success {
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-subtle-success:hover {
+    background-color: oklch(var(--success-50));
+    box-shadow: var(--shadow-subtle-hover);
+  }
+  .bg-interactive-subtle-success:active {
+    background-color: oklch(var(--success-200));
+    box-shadow: none;
+  }
+
+  .bg-interactive-subtle-info {
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .bg-interactive-subtle-info:hover {
+    background-color: oklch(var(--info-50));
+    box-shadow: var(--shadow-subtle-hover);
+  }
+  .bg-interactive-subtle-info:active {
+    background-color: oklch(var(--info-200));
+    box-shadow: none;
+  }
+}
