@@ -1,0 +1,186 @@
+:root {
+  /* Interactive accent */
+  .int-layer-accent {
+    color: oklch(var(--white));
+    background-color: oklch(var(--brand-700) / var(--opacity-95));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-accent:hover {
+    background-color: oklch(var(--brand-700) / var(--opacity-80));
+    box-shadow: var(--shadow-strong-hover);
+  }
+  .int-layer-accent:active {
+    color: oklch(var(--white) / var(--opacity-80));
+    background-color: oklch(var(--brand-800));
+    box-shadow: none;
+  }
+
+  /* Interactive accent danger */
+  .int-layer-accent-danger {
+    color: oklch(var(--white) / var(--opacity-95));
+    background-color: oklch(var(--danger-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-accent-danger:hover {
+    color: oklch(var(--white));
+    background-color: oklch(var(--danger-700) / var(--opacity-80));
+    box-shadow: var(--shadow-strong-hover);
+  }
+  .int-layer-accent-danger:active {
+    background-color: oklch(var(--danger-800));
+    box-shadow: none;
+  }
+
+  /* Interactive accent warning */
+  .int-layer-accent-warning {
+    color: oklch(var(--warning-950));
+    background-color: oklch(var(--warning-500));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-accent-warning:hover {
+    color: oklch(var(--warning-900));
+    background-color: oklch(var(--warning-400) / var(--opacity-80));
+    box-shadow: var(--shadow-strong-hover);
+  }
+  .int-layer-accent-warning:active {
+    background-color: oklch(var(--warning-600));
+    box-shadow: none;
+  }
+
+  /* Interactive accent success */
+  .int-layer-accent-success {
+    color: oklch(var(--white) / var(--opacity-95));
+    background-color: oklch(var(--success-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-accent-success:hover {
+    background-color: oklch(var(--success-700) / var(--opacity-80));
+    box-shadow: var(--shadow-strong-hover);
+  }
+  .int-layer-accent-success:active {
+    background-color: oklch(var(--success-800));
+    box-shadow: none;
+  }
+
+  /* Interactive accent info */
+  .int-layer-accent-info {
+    color: oklch(var(--white) / var(--opacity-95));
+    background-color: oklch(var(--info-700));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-accent-info:hover {
+    background-color: oklch(var(--info-700) / var(--opacity-80));
+    box-shadow: var(--shadow-strong-hover);
+  }
+  .int-layer-accent-info:active {
+    background-color: oklch(var(--info-800));
+    box-shadow: none;
+  }
+
+  /* Interactive ghost */
+  .int-layer-ghost {
+    color: oklch(var(--brand-900));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-ghost:hover {
+    color: oklch(var(--brand-700));
+    background-color: oklch(var(--brand-100));
+    box-shadow: var(--shadow-weak-hover);
+  }
+  .int-layer-ghost:active {
+    background-color: oklch(var(--brand-200));
+    box-shadow: none;
+  }
+
+  /* Interactive ghost danger */
+
+  .int-layer-ghost-danger {
+    color: oklch(var(--danger-800));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-ghost-danger:hover {
+    color: oklch(var(--danger-700));
+    background-color: oklch(var(--danger-50));
+    box-shadow: var(--shadow-weak-hover);
+  }
+  .int-layer-ghost-danger:active {
+    background-color: oklch(var(--danger-200));
+    box-shadow: none;
+  }
+
+  /* Interactive ghost warning */
+
+  .int-layer-ghost-warning {
+    color: oklch(var(--warning-900));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-ghost-warning:hover {
+    color: oklch(var(--warning-700));
+    background-color: oklch(var(--warning-50));
+    box-shadow: var(--shadow-weak-hover);
+  }
+  .int-layer-ghost-warning:active {
+    background-color: oklch(var(--warning-200));
+    box-shadow: none;
+  }
+
+  /* Interactive success danger */
+
+  .int-layer-ghost-success {
+    color: oklch(var(--success-900));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-ghost-success:hover {
+    color: oklch(var(--success-700));
+    background-color: oklch(var(--success-50));
+    box-shadow: var(--shadow-weak-hover);
+  }
+  .int-layer-ghost-success:active {
+    background-color: oklch(var(--success-200));
+    box-shadow: none;
+  }
+
+  /* Interactive ghost info */
+
+  .int-layer-ghost-info {
+    color: oklch(var(--info-800));
+    cursor: pointer;
+    transition: var(--transition-fast);
+  }
+  .int-layer-ghost-info:hover {
+    color: oklch(var(--info-700));
+    background-color: oklch(var(--info-50));
+    box-shadow: var(--shadow-weak-hover);
+  }
+  .int-layer-ghost-info:active {
+    background-color: oklch(var(--info-200));
+    box-shadow: none;
+  }
+}
+
+/*** TEXT ***/
+/* Interactive Text - Link */
+
+.int-text-link {
+  color: oklch(var(--brand-600));
+  cursor: pointer;
+}
+.int-text-link:hover {
+  color: oklch(var(--brand-400));
+  text-decoration: underline;
+}
+.int-text-link:active {
+  color: oklch(var(--brand-700));
+}
+.int-text-link:visited {
+  color: oklch(var(--brand-700));
+}

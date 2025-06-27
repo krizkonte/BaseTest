@@ -2,8 +2,8 @@
   --white: 1 0 0;
   --black: 0 0 0;
 
-/* Neutral */
---neutral-50: 0.98 0.004 180;
+  /* Neutral */
+  --neutral-50: 0.98 0.004 180;
 
   --neutral-100: 0.95 0.005 180;
   --neutral-200: 0.92 0.01 180;
@@ -16,7 +16,7 @@
   --neutral-900: 0.25 0.021 180;
   --neutral-950: 0.15 0.01 180;
 
-/* Brand */
+  /* Brand */
   --brand-50: 0.99 0.02 192;
   --brand-100: 0.97 0.036 191.943;
   --brand-200: 0.92 0.07 191.801;
@@ -29,7 +29,7 @@
   --brand-900: 0.323 0.095 190.105;
   --brand-950: 0.286 0.06 190;
 
-/* Danger */
+  /* Danger */
   --danger-50: 0.962 0.018 28;
   --danger-100: 0.93 0.034 27.637;
   --danger-200: 0.87 0.065 26.956;
@@ -42,7 +42,7 @@
   --danger-900: 0.359 0.144 21.157;
   --danger-950: 0.257 0.09 20;
 
-/* Warning */
+  /* Warning */
   --warning-50: 0.987 0.026 71;
   --warning-100: 0.973 0.071 71.379;
   --warning-200: 0.95 0.12 72.003;
@@ -55,7 +55,7 @@
   --warning-900: 0.421 0.1 86.341;
   --warning-950: 0.286 0.066 90;
 
-/* Success */
+  /* Success */
   --success-50: 0.962 0.018 145;
   --success-100: 0.93 0.034 145.454;
   --success-200: 0.87 0.065 146.305;
@@ -68,7 +68,7 @@
   --success-900: 0.359 0.144 153.553;
   --success-950: 0.257 0.09 155;
 
-/* Info */
+  /* Info */
   --info-50: 0.962 0.018 232;
   --info-100: 0.93 0.034 232.454;
   --info-200: 0.87 0.065 233.305;
@@ -81,7 +81,7 @@
   --info-900: 0.359 0.144 240.553;
   --info-950: 0.257 0.09 242;
 
-/* Transparência */
+  /* Transparência */
   --opacity-100: 1;
   --opacity-95: 0.95;
   --opacity-90: 0.9;
@@ -99,9 +99,11 @@
   --shadow-ambient-weak: oklch(var(--black) / 0.08);
   --shadow-key: oklch(var(--black) / 0.16);
   --shadow-ambient: oklch(var(--black) / 0.22);
-  
-  --shadow-accent-hover: 0px 4px 6px 0px var(--shadow-key), 0px 0px 1px 0px var(--shadow-ambient);
-  --shadow-subtle-hover: 0px 2px 4px 0px var(--shadow-key-weak), 0px 0px 1px 0px var(--shadow-ambient-weak);
+
+  --shadow-strong-hover: 0px 4px 6px 0px var(--shadow-key),
+    0px 0px 1px 0px var(--shadow-ambient);
+  --shadow-weak-hover: 0px 2px 4px 0px var(--shadow-key-weak),
+    0px 0px 1px 0px var(--shadow-ambient-weak);
 
   /* Transitions */
   --transition-fastest: 0.08s ease-in-out;

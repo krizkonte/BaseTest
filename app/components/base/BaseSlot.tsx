@@ -3,7 +3,6 @@ import * as React from "react";
 /* -------------------------------------------------------------------------------------------------
  * Utilities
  * -----------------------------------------------------------------------------------------------*/
-
 // Compõe múltiplas refs de forma segura (React 19+)
 function composeRefs<T>(
   ...refs: (React.Ref<T> | undefined)[]

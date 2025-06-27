@@ -2,20 +2,20 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "./BaseSlot";
 
-// Função utilitária para combinar classes
-function cn(...classes: (string | undefined | null | false)[]): string {
+function classMerge(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
-
-// Variantes do botão usando CVA
-const buttonVariants = cva("button-base", {
+const buttonVariants = cva("foundation-button", {
   variants: {
     variant: {
-      default: "bg-interactive-accent text-on-accent",
-      destructive: "bg-interactive-accent-danger text-on-accent-danger",
-      outline: "bg-interactive-subtle text-on-subtle border-medium border-1 ",
-      ghost: "bg-interactive-subtle text-on-subtle",
-      link: "text-on-surface-link",
+      default: "int-layer-accent",
+      outline: "int-layer-ghost border-medium border-1",
+      ghost: "int-layer-ghost",
+
+      destructive: "int-layer-accent-danger",
+      destructiveGhost: "int-layer-ghost-danger",
+
+      link: "int-text-link",
     },
     size: {
       default: "h-9 px-4 py-2",
@@ -30,27 +30,22 @@ const buttonVariants = cva("button-base", {
   },
 });
 
-// Tipos do componente Button
-
 export interface ButtonProps extends VariantProps<typeof buttonVariants> {
   asChild?: boolean;
-  // Permite qualquer prop de elemento, exceto ref
   [key: string]: any;
 }
 
-type BaseButtonRef = React.ElementRef<typeof Slot> | HTMLButtonElement;
 type BaseButtonProps = ButtonProps &
   React.ComponentPropsWithoutRef<typeof Slot> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const BaseButton = React.forwardRef<BaseButtonRef, BaseButtonProps>(
+const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    // Ref simples e seguro para ambos os casos
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref as React.Ref<any>}
+        className={classMerge(buttonVariants({ variant, size, className }))}
+        ref={ref}
         {...props}
       />
     );
@@ -58,4 +53,4 @@ const BaseButton = React.forwardRef<BaseButtonRef, BaseButtonProps>(
 );
 BaseButton.displayName = "BaseButton";
 
-export { BaseButton, buttonVariants };
+export { BaseButton };

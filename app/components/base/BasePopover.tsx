@@ -7,12 +7,12 @@ type BasePopoverProps = {
 export default function BasePopover({ description }: BasePopoverProps) {
   return (
     <Popover.Root>
-      <Popover.Trigger className="button-base bg-interactive-accent text-on-accent min-w-[32px] min-h-[32px]">
+      <Popover.Trigger className="foundation-button int-layer-accent min-w-[32px] min-h-[32px]">
         <BellIcon aria-label="Notificações" className="w-5 h-5" />
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Positioner sideOffset={8}>
-          <Popover.Popup className="bg-surface rounded-md shadow-2xl p-4 min-w-[220px]">
+          <Popover.Popup className="surface-high rounded-md shadow-2xl p-4 min-w-[220px]">
             <Popover.Arrow className="block" />
             <Popover.Title className="font-semibold text-base mb-1 text-on-surface-strong">
               Notificações

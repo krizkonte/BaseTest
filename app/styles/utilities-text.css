@@ -3,7 +3,7 @@
   .text-on-surface-strong {
     color: oklch(var(--neutral-900) / var(--opacity-90));
   }
-  .text-on-surface {
+  .text-on-surface-medium {
     color: oklch(var(--neutral-950) / var(--opacity-70));
   }
   .text-on-surface-weak {
@@ -11,20 +11,6 @@
   }
   .text-on-surface-disabled {
     color: oklch(var(--neutral-500) / var(--opacity-90));
-  }
-  .text-on-surface-link {
-    color: oklch(var(--brand-600));
-    cursor: pointer;
-  }
-  .text-on-surface-link:hover {
-    color: oklch(var(--brand-400));
-    text-decoration: underline;
-  }
-  .text-on-surface-link:active {
-    color: oklch(var(--brand-700));
-  }
-  .text-on-surface-link:visited {
-    color: oklch(var(--brand-700));
   }
   .text-on-surface-danger {
     color: oklch(var(--danger-700));
