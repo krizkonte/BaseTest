@@ -12,7 +12,6 @@
     background-color: var(--surface-bg);
     color: var(--text-color);
   }
-
   /* --------------------------------------------------------------------------
    *  Default Surface
    *  The standard background for the application.
@@ -33,49 +32,26 @@
       oklch(var(--neutral-200) / var(--opacity-90))
     );
     --text-color-tertiary: light-dark(
-      oklch(var(--neutral-600)/ var(--opacity-90)),
+      oklch(var(--neutral-600) / var(--opacity-90)),
       oklch(var(--neutral-400))
     );
     --text-color-disabled: light-dark(
-      oklch(var(--neutral-500)/ var(--opacity-70)),
-      oklch(var(--neutral-400)/ var(--opacity-60))
-    );
-    
-    --ghost-text-color: light-dark(oklch(var(--brand-700)),oklch(var(--brand-500)));
-    --ghost-bg-hover: oklch(var(--brand-500) / var(--opacity-20));
-    --ghost-bg-active: oklch(var(--brand-500) / var(--opacity-10));
-  }
-
-  /* --------------------------------------------------------------------------
-   *  Inverted Surface
-   *  For sections with an inverted background (dark on light theme, etc).
-   * -------------------------------------------------------------------------- */
-  .surface-inverted {
-    --surface-bg: light-dark(
-      oklch(var(--neutral-900)),
-      oklch(var(--neutral-50))
+      oklch(var(--neutral-500) / var(--opacity-70)),
+      oklch(var(--neutral-400) / var(--opacity-60))
     );
 
-    /* Contextual Variables for Children */
-    --text-color: light-dark(
-      oklch(var(--neutral-100)),
-      oklch(var(--neutral-900))
+    --bg-hover-ghost: light-dark(
+      oklch(var(--brand-300) / var(--opacity-30)),
+      oklch(var(--brand-400) / var(--opacity-30))
     );
-    --text-color-secondary: light-dark(
-      oklch(var(--neutral-300)),
-      oklch(var(--neutral-700))
+    --bg-active-ghost: light-dark(
+      oklch(var(--brand-500) / var(--opacity-10)),
+      oklch(var(--brand-500) / var(--opacity-10))
     );
-    --text-color-tertiary: light-dark(
-      oklch(var(--neutral-400)),
-      oklch(var(--neutral-600)/ var(--opacity-90))
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--brand-700)),
+      oklch(var(--brand-50))
     );
-    --text-color-disabled: light-dark(
-      oklch(var(--neutral-400)/ var(--opacity-50)),
-      oklch(var(--neutral-500)/ var(--opacity-70))
-    );
-
-    --ghost-bg-hover: oklch(var(--brand-500) / var(--opacity-50));
-    --ghost-bg-active: oklch(var(--brand-500) / var(--opacity-30));
   }
 
   /* --------------------------------------------------------------------------
@@ -83,7 +59,7 @@
    *  For primary actions and highlighted areas.
    * -------------------------------------------------------------------------- */
   .surface-accent {
-    --surface-bg: light-dark(oklch(var(--brand-600)),oklch(var(--brand-600)));
+    --surface-bg: light-dark(oklch(var(--brand-600)), oklch(var(--brand-600)));
 
     /* Contextual Variables for Children */
     --text-color: oklch(var(--white));
@@ -91,8 +67,10 @@
     --text-color-tertiary: oklch(var(--brand-50) / var(--opacity-90));
     --text-color-disabled: oklch(var(--brand-100) / var(--opacity-70));
 
-    --ghost-bg-hover: oklch(var(--brand-50) / var(--opacity-30));
-    --ghost-bg-active: oklch(var(--brand-50) / var(--opacity-20));
+    --bg-hover: oklch(var(--brand-400));
+    --bg-active: oklch(var(--brand-600));
+    --bg-hover-ghost: oklch(var(--brand-50) / var(--opacity-30));
+    --bg-active-ghost: oklch(var(--brand-50) / var(--opacity-20));
   }
 
   /* --------------------------------------------------------------------------
@@ -100,7 +78,10 @@
    *  For destructive actions and error states.
    * -------------------------------------------------------------------------- */
   .surface-danger {
-    --surface-bg:  light-dark(oklch(var(--danger-700)),oklch(var(--danger-600)));
+    --surface-bg: light-dark(
+      oklch(var(--danger-700)),
+      oklch(var(--danger-600))
+    );
 
     /* Contextual Variables for Children */
     --text-color: oklch(var(--white));
@@ -108,51 +89,21 @@
     --text-color-tertiary: oklch(var(--danger-50) / var(--opacity-90));
     --text-color-disabled: oklch(var(--danger-100) / var(--opacity-70));
 
-    --ghost-bg-hover: oklch(var(--danger-50) / var(--opacity-30));
-    --ghost-bg-active: oklch(var(--danger-50) / var(--opacity-20));
-  }
-
-  /* ==========================================================================
-     CONTEXTUAL INTERACTION LAYERS
-     ========================================================================== */
-
-  /* --------------------------------------------------------------------------
-   *  Ghost Interaction
-   *  Transparent element that reveals a background on interaction.
-   *  Adapts to the context provided by the parent surface.
-   * -------------------------------------------------------------------------- */
-  .surface-ghost {
-    background-color:transparent;
-    color: inherit;
-    cursor: pointer;
-    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
-    font-variation-settings: "wght" var(--font-weight-semibold), "wdth" 90;
-  }
-
-  .surface-ghost:hover:not(:disabled) {
-    background-color: var(--ghost-bg-hover);
-    color: var(--ghost-text-color);
-  }
-
-  .surface-ghost:active:not(:disabled) {
-    background-color: var(--ghost-bg-active);
-
-  }
-
-  .surface-ghost:disabled {
-    color: var(--text-color-disabled);
-    cursor: not-allowed;
+    --bg-hover: oklch(var(--danger-400));
+    --bg-active: oklch(var(--danger-600));
+    --bg-hover-ghost: oklch(var(--danger-50) / var(--opacity-30));
+    --bg-active-ghost: oklch(var(--danger-50) / var(--opacity-20));
   }
 
   /* Text utilities for specific surface contexts */
   .text-surface-secondary {
     color: var(--text-color-secondary);
   }
-  
+
   .text-surface-tertiary {
     color: var(--text-color-tertiary);
   }
-  
+
   .text-surface-disabled {
     color: var(--text-color-disabled);
   }
@@ -195,5 +146,56 @@
   /* Brand text color */
   .text-brand {
     color: oklch(var(--brand-500));
+  }
+}
+
+/* --------------------------------------------------------------------------
+CONTEXTUAL INTERACTION LAYERS
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   *  Interactive
+   *  Transparent element that reveals a background on interaction.
+   *  Adapts to the context provided by the parent surface.
+   * -------------------------------------------------------------------------- */
+@utility interactive {
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  &:hover:not(:disabled) {
+    background-color: var(--bg-hover);
+    color: var(--text-color);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--bg-active);
+  }
+
+  &:disabled {
+    color: var(--text-color-disabled);
+    cursor: not-allowed;
+  }
+
+  &.ghost {
+    background-color: transparent;
+  }
+  &.ghost:hover:not(:disabled) {
+    background-color: var(--bg-hover-ghost);
+    color: var(--text-color-hover-ghost);
+  }
+  &.ghost:active:not(:disabled) {
+    background-color: var(--bg-active-ghost);
+  }
+  &.ghost-danger:hover:not(:disabled) {
+    background-color: light-dark(
+      oklch(var(--danger-200) / var(--opacity-70)),
+      oklch(var(--danger-700) / var(--opacity-50))
+    );
+    color: light-dark(oklch(var(--danger-500)), oklch(var(--danger-50)));
+  }
+  &.ghost-danger:active:not(:disabled) {
+    background-color: light-dark(
+      oklch(var(--danger-300) / var(--opacity-70)),
+      oklch(var(--danger-900) / var(--opacity-70))
+    );
   }
 }

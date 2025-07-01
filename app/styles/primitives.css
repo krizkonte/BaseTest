@@ -16,17 +16,17 @@
   --neutral-950: 0.15 0.01 180;
 
   /* Brand */
-  --brand-50: 0.99 0.02 192;
-  --brand-100: 0.97 0.036 191.943;
-  --brand-200: 0.92 0.07 191.801;
-  --brand-300: 0.86 0.1 191.631;
-  --brand-400: 0.798 0.15 191.455;
-  --brand-500: 0.735 0.14 191.276;
-  --brand-600: 0.659 0.13 191.06;
-  --brand-700: 0.496 0.13 190.597;
-  --brand-800: 0.406 0.115 190.341;
-  --brand-900: 0.323 0.095 190.105;
-  --brand-950: 0.286 0.06 190;
+  --brand-50: 0.962 0.007 171;
+  --brand-100: 0.93 0.025 172.044;
+  --brand-200: 0.87 0.06 174.001;
+  --brand-300: 0.785 0.11 176.774;
+  --brand-400: 0.65 0.18 180.428;
+  --brand-500: 0.55 0.233 183.299;
+  --brand-600: 0.48 0.262 185.713;
+  --brand-700: 0.437 0.24 187.475;
+  --brand-800: 0.378 0.195 189.4;
+  --brand-900: 0.31 0.14 190.672;
+  --brand-950: 0.25 0.1 194;
 
   /* Danger */
   --danger-50: 0.962 0.018 28;
@@ -127,23 +127,15 @@
   --font-monos: "JetBrains Mono Variable", "SF Mono", Consolas, monospace;
 
   /* Sizes */
-  --font-size-xs: clamp(0.75rem, 0.75rem + var(--fluid-bp) * 0.125, 0.8125rem);
-  --font-size-sm: clamp(
-    0.875rem,
-    0.875rem + var(--fluid-bp) * 0.125,
-    0.9375rem
-  );
-  --font-size-base: clamp(1rem, 1rem + var(--fluid-bp) * 0.125, 1.0625rem);
-  --font-size-lg: clamp(1.125rem, 1.125rem + var(--fluid-bp) * 0.25, 1.25rem);
-  --font-size-xl: clamp(1.25rem, 1.25rem + var(--fluid-bp) * 0.375, 1.4375rem);
-  --font-size-2xl: clamp(1.5rem, 1.5rem + var(--fluid-bp) * 0.5, 1.75rem);
-  --font-size-3xl: clamp(
-    1.875rem,
-    1.875rem + var(--fluid-bp) * 0.625,
-    2.1875rem
-  );
-  --font-size-4xl: clamp(2.25rem, 2.25rem + var(--fluid-bp) * 0.75, 2.625rem);
-  --font-size-5xl: clamp(3rem, 3rem + var(--fluid-bp) * 1, 3.75rem);
+  --text-xs: clamp(0.75rem, 0.75rem + var(--fluid-bp) * 0.125, 0.8125rem);
+  --text-sm: clamp(0.875rem, 0.875rem + var(--fluid-bp) * 0.125, 0.9375rem);
+  --text-base: clamp(1rem, 1rem + var(--fluid-bp) * 0.125, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.125rem + var(--fluid-bp) * 0.25, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.25rem + var(--fluid-bp) * 0.375, 1.4375rem);
+  --text-2xl: clamp(1.5rem, 1.5rem + var(--fluid-bp) * 0.5, 1.75rem);
+  --text-3xl: clamp(1.875rem, 1.875rem + var(--fluid-bp) * 0.625, 2.1875rem);
+  --text-4xl: clamp(2.25rem, 2.25rem + var(--fluid-bp) * 0.75, 2.625rem);
+  --text-5xl: clamp(3rem, 3rem + var(--fluid-bp) * 1, 3.75rem);
 
   /* Font Weights */
   --font-weight-light: 300;

@@ -5,22 +5,22 @@ import { Slot } from "./BaseSlot";
 function classMerge(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
-const buttonVariants = cva("foundation-button", {
+const buttonVariants = cva("foundation-button interactive font-semibold", {
   variants: {
     variant: {
       default: "surface-accent",
-      outline: "surface-ghost border-medium border-1",
-      ghost: "surface-ghost",
+      outline: "ghost border-1 border-medium",
+      ghost: "ghost",
 
-      destructive: "surface-danger",
-      destructiveGhost: "surface-ghost text-error",
+      danger: "surface-danger",
+      ghostDanger: "ghost-danger text-error",
 
       link: "int-text-link",
     },
     size: {
-      default: "h-8 px-3 body-2 rounded-sm",
-      sm: "h-6 px-2 caption-1 rounded-sm",
-      lg: "h-10.5 px-4.5 body-1 rounded-lg",
+      default: "h-8 px-3 rounded-sm",
+      sm: "h-6 px-2 rounded-sm",
+      lg: "h-10.5 px-4.5 rounded-lg",
       icon: "size-8",
     },
   },
@@ -53,4 +53,4 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
 );
 BaseButton.displayName = "BaseButton";
 
-export { BaseButton };
+export default BaseButton;

@@ -1,4 +1,6 @@
 import React from "react";
+import BaseButton from "../components/base/BaseButton";
+import BasePopover from "../components/base/BasePopover";
 
 export function Welcome() {
   // Estado para o tema atual
@@ -72,9 +74,10 @@ export function Welcome() {
           Sistema
         </button>
       </div>
+
       <main className="flex flex-col items-center justify-center pt-16 pb-4 gap-4">
         {/* Exemplos de superfícies */}
-        <section className="flex flex-col gap-4 w-full max-w-md mt-8">
+        <section className="flex flex-col gap-4 w-full max-w-lg mt-8">
           <div className="surface-default p-4 rounded shadow">
             <strong>.surface-default</strong>
             <p>Superfície padrão, adaptável ao tema.</p>
@@ -87,28 +90,28 @@ export function Welcome() {
             <a href="#" className="text-link">
               Clique aqui para ver o link
             </a>
-            <div>
-              <button className="surface-ghost px-4 py-2 rounded">
-                Ghost Accent
-              </button>
-              <button className="surface-ghost px-4 py-2 rounded" disabled>
-                Ghost Disabled
-              </button>
+            <div className="flex flex-wrap gap-2 mt-4">
+              <BaseButton>Default</BaseButton>
+              <BaseButton variant="outline">Outline</BaseButton>
+              <BaseButton variant="ghost">Ghost</BaseButton>
+              <BaseButton variant="danger">Danger</BaseButton>
+              <BaseButton variant="ghostDanger">Ghost Danger</BaseButton>
             </div>
           </div>
-          <div className="surface-inverted p-4 rounded shadow">
+          <div className="surface-default inverted p-4 rounded shadow">
             <strong>.surface-inverted</strong>
             <p>Superfície invertida, para contraste.</p>
             <p className="text-surface-default">Texto padrão</p>
             <p className="text-surface-secondary">Texto secundário</p>
             <p className="text-surface-tertiary">Texto terciário</p>
             <p className="text-surface-disabled">Texto desabilitado</p>
-            <button className="surface-ghost px-4 py-2 rounded">
-              Ghost Accent
-            </button>
-            <button className="surface-ghost px-4 py-2 rounded" disabled>
-              Ghost Disabled
-            </button>
+            <div className="flex gap-2 mt-4">
+              <BaseButton>Default</BaseButton>
+              <BaseButton variant="outline">Outline</BaseButton>
+              <BaseButton variant="ghost">Ghost</BaseButton>
+              <BaseButton variant="danger">Danger</BaseButton>
+              <BaseButton variant="ghostDanger">Ghost Danger</BaseButton>
+            </div>
           </div>
           <div className="surface-accent p-4 rounded shadow">
             <strong>.surface-accent</strong>
@@ -117,12 +120,10 @@ export function Welcome() {
             <p className="text-surface-secondary">Texto secundário</p>
             <p className="text-surface-tertiary">Texto terciário</p>
             <p className="text-surface-disabled">Texto desabilitado</p>
-            <button className="surface-ghost px-4 py-2 rounded">
-              Ghost Accent
-            </button>
-            <button className="surface-ghost px-4 py-2 rounded" disabled>
-              Ghost Disabled
-            </button>
+            <div className="flex gap-2 mt-4">
+              <BaseButton variant="outline">Outline</BaseButton>
+              <BaseButton variant="ghost">Ghost</BaseButton>
+            </div>
           </div>
           <div className="surface-danger p-4 rounded shadow">
             <strong>.surface-danger</strong>
@@ -131,12 +132,10 @@ export function Welcome() {
             <p className="text-surface-secondary">Texto secundário</p>
             <p className="text-surface-tertiary">Texto terciário</p>
             <p className="text-surface-disabled">Texto desabilitado</p>
-            <button className="surface-ghost px-4 py-2 rounded">
-              Ghost Accent
-            </button>
-            <button className="surface-ghost px-4 py-2 rounded" disabled>
-              Ghost Disabled
-            </button>
+            <div className="flex gap-2 mt-4">
+              <BaseButton variant="outline">Outline</BaseButton>
+              <BaseButton variant="ghost">Ghost</BaseButton>
+            </div>
           </div>
         </section>
         {/* Exemplos de Tipografia */}

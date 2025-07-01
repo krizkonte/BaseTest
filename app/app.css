@@ -1,17 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
 @import "tailwindcss";
 @import "./styles/primitives.css";
 @import "./styles/utilities-surface.css";
 @import "./styles/utilities-typography.css";
+@plugin "./styles/border-plugin.js";
 
-:root{
+:root {
   color-scheme: light dark;
-
-  --bg-app:
-  light-dark(
-   oklch(var(--neutral-100)),
-   oklch(var(--neutral-950))
- );
+  --bg-app: light-dark(oklch(var(--neutral-100)), oklch(var(--neutral-950)));
 }
 
 html,
@@ -24,6 +20,13 @@ html.light {
 }
 html.dark {
   color-scheme: dark;
+}
+
+html.light .inverted {
+  color-scheme: dark;
+}
+html.dark .inverted {
+  color-scheme: light;
 }
 
 .root {
