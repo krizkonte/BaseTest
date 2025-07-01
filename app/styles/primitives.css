@@ -110,7 +110,7 @@
   --transition-medium: 0.2s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
 
-/* Typography */
+  /* Typography */
 
   --fluid-min-width: 360;
   --fluid-max-width: 1400;
