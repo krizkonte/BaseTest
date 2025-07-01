@@ -1,0 +1,6 @@
+@layer component {
+  .foundation-button {
+    @apply flex items-center justify-center whitespace-nowrap select-none;
+    @apply gap-2 font-semibold tracking-wide;
+  }
+}

@@ -2,9 +2,9 @@
 module.exports = function ({ matchUtilities }) {
   // Defina suas cores de borda customizadas
   const customBorderColors = {
-    weak: "oklch(var(--neutral-100))",
-    medium: "oklch(var(--neutral-200))",
-    strong: "oklch(var(--neutral-300))",
+    weak: "oklch(var(--neutral-200))",
+    medium: "oklch(var(--neutral-300))",
+    strong: "oklch(var(--neutral-400))",
     accent: "oklch(var(--brand-600))",
     danger: "oklch(var(--danger-500))",
     success: "oklch(var(--success-500))",

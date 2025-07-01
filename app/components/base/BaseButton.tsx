@@ -8,20 +8,20 @@ function classMerge(...classes: (string | undefined | null | false)[]): string {
 const buttonVariants = cva("foundation-button", {
   variants: {
     variant: {
-      default: "int-layer-accent",
-      outline: "int-layer-ghost border-medium border-1",
-      ghost: "int-layer-ghost",
+      default: "surface-accent",
+      outline: "surface-ghost border-medium border-1",
+      ghost: "surface-ghost",
 
-      destructive: "int-layer-accent-danger",
-      destructiveGhost: "int-layer-ghost-danger",
+      destructive: "surface-danger",
+      destructiveGhost: "surface-ghost text-error",
 
       link: "int-text-link",
     },
     size: {
-      default: "h-9 px-4 py-2",
-      sm: "h-8 rounded-md px-3 text-xs",
-      lg: "h-10 rounded-md px-8",
-      icon: "h-9 w-9",
+      default: "h-8 px-3 body-2 rounded-sm",
+      sm: "h-6 px-2 caption-1 rounded-sm",
+      lg: "h-10.5 px-4.5 body-1 rounded-lg",
+      icon: "size-8",
     },
   },
   defaultVariants: {

@@ -7,7 +7,7 @@ type BasePopoverProps = {
 export default function BasePopover({ description }: BasePopoverProps) {
   return (
     <Popover.Root>
-      <Popover.Trigger className="foundation-button int-layer-accent min-w-[32px] min-h-[32px]">
+      <Popover.Trigger className="foundation-button int-layer-accent size-[32px] rounded-md">
         <BellIcon aria-label="Notificações" className="w-5 h-5" />
       </Popover.Trigger>
       <Popover.Portal>
