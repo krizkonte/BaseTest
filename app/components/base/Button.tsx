@@ -7,6 +7,11 @@ import { classMerge } from "../../lib/classMerge";
 /**
  * Variantes do botão usando CVA para melhor DX e organização
  * - variant: Estilo visual do botão
+ *   - default: Surface brand (padrão)
+ *   - outline: Ghost com borda
+ *   - ghost: Transparente
+ *   - danger: Surface danger
+ *   - ghostDanger: Ghost danger
  * - size: Tamanho do botão
  * - loading: Estado de carregamento (opacity + pointer-events)
  * - fullWidth: Largura completa
@@ -15,7 +20,7 @@ import { classMerge } from "../../lib/classMerge";
 const buttonVariants = cva("foundation-button interactive font-semibold", {
   variants: {
     variant: {
-      default: "surface accent",
+      default: "surface brand",
       outline: "ghost border-surface border-thin",
       ghost: "ghost",
       danger: "surface danger",

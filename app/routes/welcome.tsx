@@ -17,13 +17,16 @@ const ButtonGroup = ({
   disabled = false,
   withPopover = false,
   hideDefault = false,
+  subtle = false,
 }) => {
   const buttonProps = disabled ? { disabled: true } : {};
 
   return (
     <div className="flex flex-col gap-2 mt-4">
       <div className="flex flex-wrap gap-2">
-        {!hideDefault && <BaseButton {...buttonProps}>Default</BaseButton>}
+        {!hideDefault && !subtle && (
+          <BaseButton {...buttonProps}>Default</BaseButton>
+        )}
         <BaseButton variant="outline" {...buttonProps}>
           Outline
         </BaseButton>
@@ -32,7 +35,7 @@ const ButtonGroup = ({
         </BaseButton>
         {withPopover && <BasePopover />}
       </div>
-      {variant === "default" && (
+      {variant === "default" && !subtle && (
         <div className="flex flex-wrap gap-2">
           <BaseButton variant="danger" {...buttonProps}>
             Danger
@@ -42,7 +45,7 @@ const ButtonGroup = ({
           </BaseButton>
         </div>
       )}
-      {variant === "default" && (
+      {variant === "default" && !subtle && (
         <div className="flex flex-wrap gap-2">
           <BaseButton disabled>Disabled</BaseButton>
           <BaseButton disabled variant="ghost">
@@ -112,7 +115,8 @@ interface SurfaceProps extends React.HTMLAttributes<HTMLDivElement> {
     | "inverted"
     | "high"
     | "low"
-    | "accent"
+    | "brand"
+    | "subtle"
     | "danger"
     | "success"
     | "info"
@@ -271,33 +275,102 @@ export function Welcome() {
             <ButtonGroup variant="default" withPopover={true} />
           </Surface>
 
-          <Surface variant="accent" title=".surface accent">
-            <ExampleContent fullText={false} />
+          {/* Brand - Normal vs Subtle */}
+          <div className="flex gap-4">
+            <Surface variant="brand" title=".surface brand" className="flex-1">
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="brand" hideDefault={true} />
+            </Surface>
 
-            <ButtonGroup variant="accent" hideDefault={true} />
-          </Surface>
+            <Surface
+              variant="subtle"
+              className="brand flex-1"
+              title=".surface subtle brand"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="default" subtle={true} />
+            </Surface>
+          </div>
 
-          <Surface variant="danger" title=".surface danger">
-            <ExampleContent fullText={false} />
+          {/* Danger - Normal vs Subtle */}
+          <div className="flex gap-4">
+            <Surface
+              variant="danger"
+              title=".surface danger"
+              className="flex-1"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="danger" hideDefault={true} />
+            </Surface>
 
-            <ButtonGroup variant="danger" hideDefault={true} />
-          </Surface>
+            <Surface
+              variant="subtle"
+              className="danger flex-1"
+              title=".surface subtle danger"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="default" subtle={true} />
+            </Surface>
+          </div>
 
-          <Surface variant="success" title=".surface success">
-            <ExampleContent fullText={false} />
+          {/* Success - Normal vs Subtle */}
+          <div className="flex gap-4">
+            <Surface
+              variant="success"
+              title=".surface success"
+              className="flex-1"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="success" hideDefault={true} />
+            </Surface>
 
-            <ButtonGroup variant="success" hideDefault={true} />
-          </Surface>
+            <Surface
+              variant="subtle"
+              className="success flex-1"
+              title=".surface subtle success"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="default" subtle={true} />
+            </Surface>
+          </div>
 
-          <Surface variant="info" title=".surface info">
-            <ExampleContent fullText={false} />
-            <ButtonGroup variant="info" hideDefault={true} />
-          </Surface>
+          {/* Info - Normal vs Subtle */}
+          <div className="flex gap-4">
+            <Surface variant="info" title=".surface info" className="flex-1">
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="info" hideDefault={true} />
+            </Surface>
 
-          <Surface variant="warning" title=".surface warning">
-            <ExampleContent fullText={false} />
-            <ButtonGroup variant="warning" hideDefault={true} />
-          </Surface>
+            <Surface
+              variant="subtle"
+              className="info flex-1"
+              title=".surface subtle info"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="default" subtle={true} />
+            </Surface>
+          </div>
+
+          {/* Warning - Normal vs Subtle */}
+          <div className="flex gap-4">
+            <Surface
+              variant="warning"
+              title=".surface warning"
+              className="flex-1"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="warning" hideDefault={true} />
+            </Surface>
+
+            <Surface
+              variant="subtle"
+              className="warning flex-1"
+              title=".surface subtle warning"
+            >
+              <ExampleContent fullText={false} />
+              <ButtonGroup variant="default" subtle={true} />
+            </Surface>
+          </div>
           {/* Exemplo visual de tipografia usando CustomTypo */}
           <div className="p-6 mb-4 flex flex-col gap-1 surface rounded-md">
             <Typography variant="heading-1">typo heading-1</Typography>

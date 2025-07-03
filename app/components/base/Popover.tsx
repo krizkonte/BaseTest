@@ -12,7 +12,7 @@ export default function BasePopover({ description }: BasePopoverProps) {
     <Popover.Root>
       <Popover.Trigger
         ref={triggerRef}
-        className="foundation-button surface accent interactive rounded-md size-8"
+        className="foundation-button surface brand interactive rounded-md size-8"
         {...forceActiveHandlers}
       >
         <BellIcon aria-label="Notificações" className="w-5 h-5" />

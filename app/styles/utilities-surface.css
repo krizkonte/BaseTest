@@ -68,13 +68,13 @@ for child elements to adapt their text and interaction colors.
   }
 
   /* --------------------------------------------------------------------------
-   *  Accent Surface
+   *  Brand Surface
    *  For primary actions and highlighted areas.
    * -------------------------------------------------------------------------- */
-  &.accent {
+  &.brand {
     --surface-bg: light-dark(
-      oklch(var(--brand-700) / var(--opacity-90)),
-      oklch(var(--brand-800) / var(--opacity-90))
+      oklch(var(--brand-800) / var(--opacity-90)),
+      oklch(var(--brand-900) / var(--opacity-90))
     );
 
     /* Contextual Variables for Children */
@@ -84,7 +84,7 @@ for child elements to adapt their text and interaction colors.
     --text-color-disabled: oklch(var(--brand-100) / var(--opacity-70));
 
     --bg-hover: light-dark(oklch(var(--brand-400)), oklch(var(--brand-600)));
-    --bg-active: oklch(var(--brand-600));
+    --bg-active: light-dark(oklch(var(--brand-600)), oklch(var(--brand-800)));
     --bg-hover-ghost: oklch(var(--brand-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--brand-50) / var(--opacity-20));
     --text-color-hover-ghost: oklch(var(--brand-50));
@@ -101,8 +101,8 @@ for child elements to adapt their text and interaction colors.
    * -------------------------------------------------------------------------- */
   &.danger {
     --surface-bg: light-dark(
-      oklch(var(--danger-600)),
-      oklch(var(--danger-700))
+      oklch(var(--danger-700)),
+      oklch(var(--danger-900))
     );
 
     /* Contextual Variables for Children */
@@ -112,7 +112,7 @@ for child elements to adapt their text and interaction colors.
     --text-color-disabled: oklch(var(--danger-100) / var(--opacity-70));
 
     --bg-hover: light-dark(oklch(var(--danger-400)), oklch(var(--danger-500)));
-    --bg-active: oklch(var(--danger-600));
+    --bg-active: light-dark(oklch(var(--danger-600)), oklch(var(--danger-800)));
     --bg-hover-ghost: oklch(var(--danger-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--danger-50) / var(--opacity-20));
     --text-color-hover-ghost: oklch(var(--danger-50));
@@ -129,8 +129,8 @@ for child elements to adapt their text and interaction colors.
    * -------------------------------------------------------------------------- */
   &.success {
     --surface-bg: light-dark(
-      oklch(var(--success-700) / var(--opacity-90)),
-      oklch(var(--success-800) / var(--opacity-90))
+      oklch(var(--success-800) / var(--opacity-90)),
+      oklch(var(--success-900) / var(--opacity-90))
     );
 
     /* Variáveis contextuais para filhos */
@@ -160,8 +160,8 @@ for child elements to adapt their text and interaction colors.
    * -------------------------------------------------------------------------- */
   &.info {
     --surface-bg: light-dark(
-      oklch(var(--info-700) / var(--opacity-90)),
-      oklch(var(--info-800) / var(--opacity-90))
+      oklch(var(--info-800) / var(--opacity-90)),
+      oklch(var(--info-900) / var(--opacity-90))
     );
 
     /* Variáveis contextuais para filhos */
@@ -176,10 +176,7 @@ for child elements to adapt their text and interaction colors.
     --bg-active-ghost: oklch(var(--info-50) / var(--opacity-20));
     --text-color-hover-ghost: oklch(var(--info-50));
 
-    --surface-border: light-dark(
-      oklch(var(--info-50)),
-      oklch(var(--info-100))
-    );
+    --surface-border: light-dark(oklch(var(--info-50)), oklch(var(--info-100)));
   }
 
   /* --------------------------------------------------------------------------
@@ -189,7 +186,7 @@ for child elements to adapt their text and interaction colors.
   &.warning {
     --surface-bg: light-dark(
       oklch(var(--warning-500) / var(--opacity-90)),
-      oklch(var(--warning-400) / var(--opacity-90))
+      oklch(var(--warning-500) / var(--opacity-90))
     );
 
     /* Variáveis contextuais para filhos */
@@ -210,6 +207,210 @@ for child elements to adapt their text and interaction colors.
     --surface-border: light-dark(
       oklch(var(--warning-600)),
       oklch(var(--warning-700))
+    );
+  }
+
+  /* --------------------------------------------------------------------------
+   *  Subtle Surface Modifier
+   *  Versão mais suave das superfícies coloridas.
+   *  Usado para elementos que precisam de destaque sutil.
+   *  
+   *  Uso:
+   *  - .surface.subtle.brand (brand subtle)
+   *  - .surface.subtle.danger
+   *  - .surface.subtle.success
+   *  - .surface.subtle.info
+   *  - .surface.subtle.warning
+   * -------------------------------------------------------------------------- */
+  &.subtle.brand {
+    /* Override base para tom mais fraco */
+    --surface-bg: light-dark(
+      oklch(var(--brand-50) / var(--opacity-90)),
+      oklch(var(--brand-950) / var(--opacity-80))
+    );
+
+    /* Contextual Variables for Children */
+    --text-color: light-dark(oklch(var(--brand-900)), oklch(var(--brand-50)));
+    --text-color-secondary: light-dark(
+      oklch(var(--brand-800) / var(--opacity-90)),
+      oklch(var(--brand-100) / var(--opacity-90))
+    );
+    --text-color-tertiary: light-dark(
+      oklch(var(--brand-700) / var(--opacity-90)),
+      oklch(var(--brand-200))
+    );
+    --text-color-disabled: light-dark(
+      oklch(var(--brand-600) / var(--opacity-70)),
+      oklch(var(--brand-300) / var(--opacity-60))
+    );
+
+    --bg-hover-ghost: light-dark(
+      oklch(var(--brand-200) / var(--opacity-40)),
+      oklch(var(--brand-800) / var(--opacity-40))
+    );
+    --bg-active-ghost: light-dark(
+      oklch(var(--brand-300) / var(--opacity-30)),
+      oklch(var(--brand-700) / var(--opacity-30))
+    );
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--brand-800)),
+      oklch(var(--brand-100))
+    );
+
+    --surface-border: light-dark(
+      oklch(var(--brand-200)),
+      oklch(var(--brand-900))
+    );
+  }
+
+  /* Combinações com intenções específicas */
+  &.subtle.danger {
+    --surface-bg: light-dark(
+      oklch(var(--danger-50) / var(--opacity-90)),
+      oklch(var(--danger-950) / var(--opacity-80))
+    );
+    --text-color: light-dark(oklch(var(--danger-900)), oklch(var(--danger-50)));
+    --text-color-secondary: light-dark(
+      oklch(var(--danger-800) / var(--opacity-90)),
+      oklch(var(--danger-100) / var(--opacity-90))
+    );
+    --text-color-tertiary: light-dark(
+      oklch(var(--danger-700) / var(--opacity-90)),
+      oklch(var(--danger-200))
+    );
+    --text-color-disabled: light-dark(
+      oklch(var(--danger-600) / var(--opacity-70)),
+      oklch(var(--danger-300) / var(--opacity-60))
+    );
+    --bg-hover-ghost: light-dark(
+      oklch(var(--danger-200) / var(--opacity-40)),
+      oklch(var(--danger-800) / var(--opacity-40))
+    );
+    --bg-active-ghost: light-dark(
+      oklch(var(--danger-300) / var(--opacity-30)),
+      oklch(var(--danger-700) / var(--opacity-30))
+    );
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--danger-800)),
+      oklch(var(--danger-100))
+    );
+    --surface-border: light-dark(
+      oklch(var(--danger-200)),
+      oklch(var(--danger-900))
+    );
+  }
+
+  &.subtle.success {
+    --surface-bg: light-dark(
+      oklch(var(--success-50) / var(--opacity-90)),
+      oklch(var(--success-950) / var(--opacity-80))
+    );
+    --text-color: light-dark(
+      oklch(var(--success-900)),
+      oklch(var(--success-50))
+    );
+    --text-color-secondary: light-dark(
+      oklch(var(--success-800) / var(--opacity-90)),
+      oklch(var(--success-100) / var(--opacity-90))
+    );
+    --text-color-tertiary: light-dark(
+      oklch(var(--success-700) / var(--opacity-90)),
+      oklch(var(--success-200))
+    );
+    --text-color-disabled: light-dark(
+      oklch(var(--success-600) / var(--opacity-70)),
+      oklch(var(--success-300) / var(--opacity-60))
+    );
+    --bg-hover-ghost: light-dark(
+      oklch(var(--success-200) / var(--opacity-40)),
+      oklch(var(--success-800) / var(--opacity-40))
+    );
+    --bg-active-ghost: light-dark(
+      oklch(var(--success-300) / var(--opacity-30)),
+      oklch(var(--success-700) / var(--opacity-30))
+    );
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--success-800)),
+      oklch(var(--success-100))
+    );
+    --surface-border: light-dark(
+      oklch(var(--success-200)),
+      oklch(var(--success-900))
+    );
+  }
+
+  &.subtle.info {
+    --surface-bg: light-dark(
+      oklch(var(--info-50) / var(--opacity-90)),
+      oklch(var(--info-950) / var(--opacity-80))
+    );
+    --text-color: light-dark(oklch(var(--info-900)), oklch(var(--info-50)));
+    --text-color-secondary: light-dark(
+      oklch(var(--info-800) / var(--opacity-90)),
+      oklch(var(--info-100) / var(--opacity-90))
+    );
+    --text-color-tertiary: light-dark(
+      oklch(var(--info-700) / var(--opacity-90)),
+      oklch(var(--info-200))
+    );
+    --text-color-disabled: light-dark(
+      oklch(var(--info-600) / var(--opacity-70)),
+      oklch(var(--info-300) / var(--opacity-60))
+    );
+    --bg-hover-ghost: light-dark(
+      oklch(var(--info-200) / var(--opacity-40)),
+      oklch(var(--info-800) / var(--opacity-40))
+    );
+    --bg-active-ghost: light-dark(
+      oklch(var(--info-300) / var(--opacity-30)),
+      oklch(var(--info-700) / var(--opacity-30))
+    );
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--info-800)),
+      oklch(var(--info-100))
+    );
+    --surface-border: light-dark(
+      oklch(var(--info-200)),
+      oklch(var(--info-900))
+    );
+  }
+
+  &.subtle.warning {
+    --surface-bg: light-dark(
+      oklch(var(--warning-50) / var(--opacity-90)),
+      oklch(var(--warning-950) / var(--opacity-80))
+    );
+    --text-color: light-dark(
+      oklch(var(--warning-900)),
+      oklch(var(--warning-50))
+    );
+    --text-color-secondary: light-dark(
+      oklch(var(--warning-800) / var(--opacity-90)),
+      oklch(var(--warning-100) / var(--opacity-90))
+    );
+    --text-color-tertiary: light-dark(
+      oklch(var(--warning-700) / var(--opacity-90)),
+      oklch(var(--warning-200))
+    );
+    --text-color-disabled: light-dark(
+      oklch(var(--warning-600) / var(--opacity-70)),
+      oklch(var(--warning-300) / var(--opacity-60))
+    );
+    --bg-hover-ghost: light-dark(
+      oklch(var(--warning-200) / var(--opacity-40)),
+      oklch(var(--warning-800) / var(--opacity-40))
+    );
+    --bg-active-ghost: light-dark(
+      oklch(var(--warning-300) / var(--opacity-30)),
+      oklch(var(--warning-700) / var(--opacity-30))
+    );
+    --text-color-hover-ghost: light-dark(
+      oklch(var(--warning-800)),
+      oklch(var(--warning-100))
+    );
+    --surface-border: light-dark(
+      oklch(var(--warning-200)),
+      oklch(var(--warning-900))
     );
   }
 }
