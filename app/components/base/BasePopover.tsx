@@ -19,7 +19,7 @@ export default function BasePopover({ description }: BasePopoverProps) {
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Positioner sideOffset={8}>
-          <Popover.Popup className="surface high rounded-md shadow-2xl p-4 min-w-[220px] border-weak border-1">
+          <Popover.Popup className="surface high border-surface border-thin rounded-md shadow-2xl p-4 min-w-[220px]">
             <Popover.Arrow className="block" />
             <Popover.Title className="typo heading-3 font-semibold mb-1">
               Notificações

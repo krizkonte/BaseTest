@@ -6,7 +6,10 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "predeploy": "react-router build",
+    "deploy": "gh-pages -d build/client",
+    "postbuild": "copy build\\client\\index.html build\\client\\404.html"
   },
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.0",
@@ -24,9 +27,11 @@
     "@types/node": "^20",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
     "vite-tsconfig-paths": "^5.1.4"
-  }
+  },
+  "homepage": "https://krizkonte.github.io/BaseTest"
 }

@@ -4,7 +4,8 @@
 @import "./styles/utilities-surface.css";
 @import "./styles/utilities-typography.css";
 @import "./styles/component.css";
-@plugin "./styles/border-plugin.js";
+@import "./styles/utilities-border.css";
+@import "./styles/data-brand.css";
 
 :root {
   color-scheme: light dark;

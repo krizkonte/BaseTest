@@ -23,7 +23,7 @@ for child elements to adapt their text and interaction colors.
   );
 
   --bg-hover-ghost: light-dark(
-    oklch(var(--brand-200)/ var(--opacity-50)),
+    oklch(var(--brand-200) / var(--opacity-50)),
     oklch(var(--brand-400) / var(--opacity-30))
   );
   --bg-active-ghost: light-dark(
@@ -34,9 +34,14 @@ for child elements to adapt their text and interaction colors.
     oklch(var(--brand-700)),
     oklch(var(--brand-50))
   );
+  --surface-border: light-dark(
+    oklch(var(--neutral-300)),
+    oklch(var(--neutral-400))
+  );
 
   background-color: var(--surface-bg);
   color: var(--text-color);
+  border: var(--surface-border);
 
   /* --------------------------------------------------------------------------
    *  Surface elevation
@@ -44,12 +49,21 @@ for child elements to adapt their text and interaction colors.
    * -------------------------------------------------------------------------- */
   &.high {
     --surface-bg: light-dark(oklch(var(--white)), oklch(var(--neutral-700)));
+
+    --surface-border: light-dark(
+      oklch(var(--neutral-200)),
+      oklch(var(--neutral-600))
+    );
   }
 
   &.low {
     --surface-bg: light-dark(
       oklch(var(--neutral-100)),
       oklch(var(--neutral-900))
+    );
+    --surface-border: light-dark(
+      oklch(var(--neutral-300)),
+      oklch(var(--neutral-600))
     );
   }
 
@@ -73,6 +87,12 @@ for child elements to adapt their text and interaction colors.
     --bg-active: oklch(var(--brand-600));
     --bg-hover-ghost: oklch(var(--brand-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--brand-50) / var(--opacity-20));
+    --text-color-hover-ghost: oklch(var(--brand-50));
+
+    --surface-border: light-dark(
+      oklch(var(--brand-50)),
+      oklch(var(--brand-100))
+    );
   }
 
   /* --------------------------------------------------------------------------
@@ -91,13 +111,16 @@ for child elements to adapt their text and interaction colors.
     --text-color-tertiary: oklch(var(--danger-50) / var(--opacity-90));
     --text-color-disabled: oklch(var(--danger-100) / var(--opacity-70));
 
-    --bg-hover: light-dark(
-      oklch(var(--danger-400)),
-      oklch(var(--danger-500))
-    );
+    --bg-hover: light-dark(oklch(var(--danger-400)), oklch(var(--danger-500)));
     --bg-active: oklch(var(--danger-600));
     --bg-hover-ghost: oklch(var(--danger-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--danger-50) / var(--opacity-20));
+    --text-color-hover-ghost: oklch(var(--danger-50));
+
+    --surface-border: light-dark(
+      oklch(var(--danger-50)),
+      oklch(var(--danger-100))
+    );
   }
 
   /* --------------------------------------------------------------------------
@@ -123,6 +146,12 @@ for child elements to adapt their text and interaction colors.
     --bg-active: oklch(var(--success-600));
     --bg-hover-ghost: oklch(var(--success-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--success-50) / var(--opacity-20));
+    --text-color-hover-ghost: oklch(var(--success-50));
+
+    --surface-border: light-dark(
+      oklch(var(--success-50)),
+      oklch(var(--success-100))
+    );
   }
 
   /* --------------------------------------------------------------------------
@@ -145,6 +174,12 @@ for child elements to adapt their text and interaction colors.
     --bg-active: oklch(var(--info-600));
     --bg-hover-ghost: oklch(var(--info-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--info-50) / var(--opacity-20));
+    --text-color-hover-ghost: oklch(var(--info-50));
+
+    --surface-border: light-dark(
+      oklch(var(--info-50)),
+      oklch(var(--info-100))
+    );
   }
 
   /* --------------------------------------------------------------------------
@@ -170,7 +205,12 @@ for child elements to adapt their text and interaction colors.
     --bg-active: oklch(var(--warning-600));
     --bg-hover-ghost: oklch(var(--warning-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--warning-50) / var(--opacity-20));
-    --text-color-hover-ghost: oklch(var(--warning-900))
+    --text-color-hover-ghost: oklch(var(--warning-900));
+
+    --surface-border: light-dark(
+      oklch(var(--warning-600)),
+      oklch(var(--warning-700))
+    );
   }
 }
 
@@ -226,7 +266,6 @@ for child elements to adapt their text and interaction colors.
     color: oklch(var(--brand-500));
   }
 }
-
 /* --------------------------------------------------------------------------
 CONTEXTUAL INTERACTION LAYERS
 -------------------------------------------------------------------------- */

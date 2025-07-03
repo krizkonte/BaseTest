@@ -1,0 +1,398 @@
+:root {
+  /* ==========================================
+       TOKENS DE ESPESSURA
+       ========================================== */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-base: 1.5px;
+  --border-width-thick: 2px;
+  --border-width-heavy: 3px;
+  --border-width-bold: 4px;
+  --border-width-extra: 6px;
+  --border-width-massive: 8px;
+
+  /* ==========================================
+       TOKENS DE RAIO
+       ========================================== */
+  --border-radius-none: 0;
+  --border-radius-sm: 0.125rem;
+  --border-radius-base: 0.25rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
+  --border-radius-3xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  /* ==========================================
+       TOKENS DE COR DE BORDA (PADRÃO SURFACE)
+       ========================================== */
+  --border-color-default: light-dark(
+    oklch(var(--neutral-300)),
+    oklch(var(--neutral-700))
+  );
+  --border-color-muted: light-dark(
+    oklch(var(--neutral-200)),
+    oklch(var(--neutral-800))
+  );
+  --border-color-subtle: light-dark(
+    oklch(var(--neutral-100)),
+    oklch(var(--neutral-900))
+  );
+  --border-color-emphasis: light-dark(
+    oklch(var(--neutral-400)),
+    oklch(var(--neutral-600))
+  );
+  --border-color-strong: light-dark(
+    oklch(var(--neutral-500)),
+    oklch(var(--neutral-500))
+  );
+
+  --border-color-accent: light-dark(
+    oklch(var(--brand-600)),
+    oklch(var(--brand-400))
+  );
+  --border-color-danger: light-dark(
+    oklch(var(--danger-500)),
+    oklch(var(--danger-500))
+  );
+  --border-color-success: light-dark(
+    oklch(var(--success-500)),
+    oklch(var(--success-500))
+  );
+  --border-color-warning: light-dark(
+    oklch(var(--warning-500)),
+    oklch(var(--warning-400))
+  );
+  --border-color-info: light-dark(
+    oklch(var(--info-500)),
+    oklch(var(--info-400))
+  );
+}
+
+@layer utilities {
+  /* ==========================================
+     UTILIDADES DE ESPESSURA
+     ========================================== */
+  .border-hairline {
+    border-width: var(--border-width-hairline);
+  }
+  .border-thin {
+    border-width: var(--border-width-thin);
+  }
+  .border-base {
+    border-width: var(--border-width-base);
+  }
+  .border-thick {
+    border-width: var(--border-width-thick);
+  }
+  .border-heavy {
+    border-width: var(--border-width-heavy);
+  }
+  .border-bold {
+    border-width: var(--border-width-bold);
+  }
+  .border-extra {
+    border-width: var(--border-width-extra);
+  }
+  .border-massive {
+    border-width: var(--border-width-massive);
+  }
+
+  /* Espessuras por lado */
+  .border-t-hairline {
+    border-top-width: var(--border-width-hairline);
+  }
+  .border-r-hairline {
+    border-right-width: var(--border-width-hairline);
+  }
+  .border-b-hairline {
+    border-bottom-width: var(--border-width-hairline);
+  }
+  .border-l-hairline {
+    border-left-width: var(--border-width-hairline);
+  }
+
+  .border-t-thin {
+    border-top-width: var(--border-width-thin);
+  }
+  .border-r-thin {
+    border-right-width: var(--border-width-thin);
+  }
+  .border-b-thin {
+    border-bottom-width: var(--border-width-thin);
+  }
+  .border-l-thin {
+    border-left-width: var(--border-width-thin);
+  }
+
+  .border-t-base {
+    border-top-width: var(--border-width-base);
+  }
+  .border-r-base {
+    border-right-width: var(--border-width-base);
+  }
+  .border-b-base {
+    border-bottom-width: var(--border-width-base);
+  }
+  .border-l-base {
+    border-left-width: var(--border-width-base);
+  }
+
+  .border-t-thick {
+    border-top-width: var(--border-width-thick);
+  }
+  .border-r-thick {
+    border-right-width: var(--border-width-thick);
+  }
+  .border-b-thick {
+    border-bottom-width: var(--border-width-thick);
+  }
+  .border-l-thick {
+    border-left-width: var(--border-width-thick);
+  }
+
+  /* ==========================================
+     UTILIDADES DE COR SEMÂNTICA
+     ========================================== */
+  .border-default {
+    border-color: var(--border-color-default);
+    border-style: solid;
+  }
+  .border-muted {
+    border-color: var(--border-color-muted);
+    border-style: solid;
+  }
+  .border-subtle {
+    border-color: var(--border-color-subtle);
+    border-style: solid;
+  }
+  .border-emphasis {
+    border-color: var(--border-color-emphasis);
+    border-style: solid;
+  }
+  .border-strong {
+    border-color: var(--border-color-strong);
+    border-style: solid;
+  }
+
+  .border-accent {
+    border-color: var(--border-color-accent);
+    border-style: solid;
+  }
+  .border-danger {
+    border-color: var(--border-color-danger);
+    border-style: solid;
+  }
+  .border-success {
+    border-color: var(--border-color-success);
+    border-style: solid;
+  }
+  .border-warning {
+    border-color: var(--border-color-warning);
+    border-style: solid;
+  }
+  .border-info {
+    border-color: var(--border-color-info);
+    border-style: solid;
+  }
+
+  .border-surface {
+    border-color: var(--surface-border);
+    border-style: solid;
+  }
+
+  /* ==========================================
+     UTILITÁRIOS DE COR DE BORDA POR LADO
+     ========================================== */
+  .border-t-default {
+    border-top-color: var(--border-color-default);
+  }
+  .border-r-default {
+    border-right-color: var(--border-color-default);
+  }
+  .border-b-default {
+    border-bottom-color: var(--border-color-default);
+  }
+  .border-l-default {
+    border-left-color: var(--border-color-default);
+  }
+
+  .border-t-accent {
+    border-top-color: var(--border-color-accent);
+  }
+  .border-r-accent {
+    border-right-color: var(--border-color-accent);
+  }
+  .border-b-accent {
+    border-bottom-color: var(--border-color-accent);
+  }
+  .border-l-accent {
+    border-left-color: var(--border-color-accent);
+  }
+
+  .border-t-danger {
+    border-top-color: var(--border-color-danger);
+  }
+  .border-r-danger {
+    border-right-color: var(--border-color-danger);
+  }
+  .border-b-danger {
+    border-bottom-color: var(--border-color-danger);
+  }
+  .border-l-danger {
+    border-left-color: var(--border-color-danger);
+  }
+
+  .border-t-success {
+    border-top-color: var(--border-color-success);
+  }
+  .border-r-success {
+    border-right-color: var(--border-color-success);
+  }
+  .border-b-success {
+    border-bottom-color: var(--border-color-success);
+  }
+  .border-l-success {
+    border-left-color: var(--border-color-success);
+  }
+
+  .border-t-warning {
+    border-top-color: var(--border-color-warning);
+  }
+  .border-r-warning {
+    border-right-color: var(--border-color-warning);
+  }
+  .border-b-warning {
+    border-bottom-color: var(--border-color-warning);
+  }
+  .border-l-warning {
+    border-left-color: var(--border-color-warning);
+  }
+
+  .border-t-info {
+    border-top-color: var(--border-color-info);
+  }
+  .border-r-info {
+    border-right-color: var(--border-color-info);
+  }
+  .border-b-info {
+    border-bottom-color: var(--border-color-info);
+  }
+  .border-l-info {
+    border-left-color: var(--border-color-info);
+  }
+
+  .border-t-surface {
+    border-top-color: var(--surface-border);
+  }
+  .border-r-surface {
+    border-right-color: var(--surface-border);
+  }
+  .border-b-surface {
+    border-bottom-color: var(--surface-border);
+  }
+  .border-l-surface {
+    border-left-color: var(--surface-border);
+  }
+
+  /* ==========================================
+     UTILIDADES DE RAIO
+     ========================================== */
+  .rounded-none {
+    border-radius: var(--border-radius-none);
+  }
+  .rounded-sm {
+    border-radius: var(--border-radius-sm);
+  }
+  .rounded-base {
+    border-radius: var(--border-radius-base);
+  }
+  .rounded-md {
+    border-radius: var(--border-radius-md);
+  }
+  .rounded-lg {
+    border-radius: var(--border-radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--border-radius-xl);
+  }
+  .rounded-2xl {
+    border-radius: var(--border-radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--border-radius-3xl);
+  }
+  .rounded-full {
+    border-radius: var(--border-radius-full);
+  }
+
+  /* ==========================================
+     UTILITÁRIOS DE RAIO POR LADO
+     ========================================== */
+  .rounded-t-none {
+    border-top-left-radius: var(--border-radius-none);
+    border-top-right-radius: var(--border-radius-none);
+  }
+  .rounded-r-none {
+    border-top-right-radius: var(--border-radius-none);
+    border-bottom-right-radius: var(--border-radius-none);
+  }
+  .rounded-b-none {
+    border-bottom-right-radius: var(--border-radius-none);
+    border-bottom-left-radius: var(--border-radius-none);
+  }
+  .rounded-l-none {
+    border-top-left-radius: var(--border-radius-none);
+    border-bottom-left-radius: var(--border-radius-none);
+  }
+
+  .rounded-t-sm {
+    border-top-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm);
+  }
+  .rounded-r-sm {
+    border-top-right-radius: var(--border-radius-sm);
+    border-bottom-right-radius: var(--border-radius-sm);
+  }
+  .rounded-b-sm {
+    border-bottom-right-radius: var(--border-radius-sm);
+    border-bottom-left-radius: var(--border-radius-sm);
+  }
+  .rounded-l-sm {
+    border-top-left-radius: var(--border-radius-sm);
+    border-bottom-left-radius: var(--border-radius-sm);
+  }
+
+  /* Repita para base, md, lg, xl, 2xl, 3xl, full conforme necessário */
+}
+
+/* ==========================================
+UTILIDADES DE ESTILO
+========================================== */
+@layer utilities {
+  .border-solid {
+    border-style: solid;
+  }
+  .border-dashed {
+    border-style: dashed;
+  }
+  .border-dotted {
+    border-style: dotted;
+  }
+  .border-double {
+    border-style: double;
+  }
+  .border-groove {
+    border-style: groove;
+  }
+  .border-ridge {
+    border-style: ridge;
+  }
+  .border-inset {
+    border-style: inset;
+  }
+  .border-outset {
+    border-style: outset;
+  }
+}

@@ -11,17 +11,15 @@ const buttonVariants = cva("foundation-button interactive font-semibold", {
   variants: {
     variant: {
       default: "surface accent",
-      outline: "ghost border-1 border-medium",
+      outline: "ghost border-surface border-thin",
       ghost: "ghost",
 
       danger: "surface danger",
       ghostDanger: "ghost danger",
-
-      link: "int-text-link",
     },
     size: {
-      default: "h-8 px-3 rounded-sm",
-      sm: "h-6 px-2 rounded-sm",
+      default: "h-8 px-3 rounded-md",
+      sm: "h-6 px-2 rounded-md",
       lg: "h-10.5 px-4.5 rounded-lg",
       icon: "size-8",
     },
