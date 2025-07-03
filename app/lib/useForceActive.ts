@@ -19,7 +19,8 @@ function composeRefs<T>(...refs: (Ref<T> | undefined)[]): React.RefCallback<T> {
 
 export function useForceActive<T extends HTMLElement = HTMLElement>(
   duration = 150,
-  externalRef?: Ref<T | null>
+  externalRef?: Ref<T | null>,
+  externalHandlers?: Record<string, (e: any) => void>
 ): [RefObject<T | null>, Record<string, (e: any) => void>] {
   const ref = useRef<T | null>(null);
   const timeoutRef = useRef<number | null>(null);
@@ -51,12 +52,31 @@ export function useForceActive<T extends HTMLElement = HTMLElement>(
     return ref;
   }, [externalRef]);
 
-  const handlers = useMemo(
-    () => ({
+  // Combinar handlers internos com externos
+  const handlers = useMemo(() => {
+    const baseHandlers = {
       onMouseDown: activate,
-    }),
-    [activate]
-  );
+    };
+
+    if (!externalHandlers) return baseHandlers;
+
+    return {
+      ...baseHandlers,
+      ...Object.fromEntries(
+        Object.entries(externalHandlers).map(([key, handler]) => [
+          key,
+          (e: any) => {
+            // Sempre executa o handler interno primeiro
+            if (key === "onMouseDown") {
+              activate();
+            }
+            // Depois executa o handler externo
+            handler(e);
+          },
+        ])
+      ),
+    };
+  }, [activate, externalHandlers]);
 
   // Retorna o ref composto para uso no componente
   return [composedRef as RefObject<T | null>, handlers];

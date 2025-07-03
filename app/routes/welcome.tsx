@@ -1,6 +1,7 @@
 import React from "react";
-import BaseButton from "../components/base/BaseButton";
-import BasePopover from "../components/base/BasePopover";
+import BaseButton from "../components/base/Button";
+import BasePopover from "../components/base/Popover";
+import { Typography } from "../components/custom/Typography";
 
 // Definindo os tipos para as props do ExampleContent
 interface ExampleContentProps {
@@ -63,22 +64,42 @@ const ExampleContent: React.FC<ExampleContentProps> = ({
   fullText = true,
 }) => (
   <>
-    {title && <strong>{title}</strong>}
-    <p className="text-default">Texto padrão</p>
-    <p className="text-secondary">Texto secundário</p>
-    {fullText && <p className="text-tertiary">Texto terciário</p>}
-    <p className="text-disabled">Texto desabilitado</p>
+    {title && (
+      <Typography variant="heading-1" asChild>
+        <strong>{title}</strong>
+      </Typography>
+    )}
+    <Typography variant="body-1">Texto padrão</Typography>
+    <Typography variant="body-2" color="secondary">
+      Texto secundário
+    </Typography>
+    {fullText && (
+      <Typography variant="body-2" color="tertiary">
+        Texto terciário
+      </Typography>
+    )}
+    <Typography variant="body-2" color="disabled" weight="semibold">
+      Texto desabilitado
+    </Typography>
     {fullText && (
       <>
-        <p className="text-success">Operação realizada com sucesso!</p>
-        <p className="text-error">Ocorreu um erro.</p>
-        <p className="text-info">Sou uma informação relevante</p>
-        <p className="text-warning">Sou um aviso urgente!</p>
+        <Typography variant="caption-1" as="p" status="success">
+          Operação realizada com sucesso!
+        </Typography>
+        <Typography variant="caption-1" as="p" status="error">
+          Ocorreu um erro.
+        </Typography>
+        <Typography variant="caption-1" as="p" status="info">
+          Sou uma informação relevante
+        </Typography>
+        <Typography variant="caption-1" as="p" status="warning">
+          Sou um aviso urgente!
+        </Typography>
       </>
     )}
     {fullText && (
       <a href="#" className="text-link">
-        Clique aqui para ver o link
+        <Typography variant="body-2">Clique aqui para ver o link</Typography>
       </a>
     )}
   </>
@@ -105,7 +126,6 @@ interface SurfaceProps extends React.HTMLAttributes<HTMLDivElement> {
 const Surface: React.FC<SurfaceProps> = ({
   variant = "default",
   title,
-  description,
   children,
   className = "",
   ...props
@@ -116,8 +136,11 @@ const Surface: React.FC<SurfaceProps> = ({
 
   return (
     <div className={classes} {...props}>
-      {title && <strong>{title}</strong>}
-      {description && <p>{description}</p>}
+      {title && (
+        <Typography variant="heading-1" as="h3">
+          {title}
+        </Typography>
+      )}
       {children}
     </div>
   );
@@ -228,24 +251,6 @@ export function Welcome() {
 
       <main className="flex flex-col items-center justify-center pt-16 pb-4 gap-4">
         <section className="flex flex-col gap-4 w-full max-w-2xl mt-8">
-          {/* Exemplo visual de tipografia */}
-          <div className="p-6 mb-4 flex flex-col gap-1 surface rounded-md">
-            <div className="typo heading-1">typo heading-1</div>
-            <div className="typo heading-2">typo heading-2</div>
-            <div className="typo tittle-1">typo tittle-1</div>
-            <div className="typo tittle-2">typo tittle-2</div>
-            <div className="typo body-1">typo body-1</div>
-            <div className="typo body-2">typo body-2</div>
-            <div className="typo caption-1">typo caption-1</div>
-            <div className="typo caption-2">typo caption-2</div>
-            <div className="typo font-black">typo font-black</div>
-            <div className="typo font-extrabold">typo font-extrabold</div>
-            <div className="typo font-bold">typo font-bold</div>
-            <div className="typo font-semibold">typo font-semibold</div>
-            <div className="typo font-medium">typo font-medium</div>
-            <div className="typo font-regular">typo font-regular</div>
-            <div className="typo font-light">typo font-light</div>
-          </div>
           <Surface className="flex flex-col gap-4">
             <div>
               <ExampleContent title=".surface" fullText={true} />
@@ -292,6 +297,112 @@ export function Welcome() {
           <Surface variant="warning" title=".surface warning">
             <ExampleContent fullText={false} />
             <ButtonGroup variant="warning" hideDefault={true} />
+          </Surface>
+          {/* Exemplo visual de tipografia usando CustomTypo */}
+          <div className="p-6 mb-4 flex flex-col gap-1 surface rounded-md">
+            <Typography variant="heading-1">typo heading-1</Typography>
+            <Typography variant="heading-2">typo heading-2</Typography>
+            <Typography variant="tittle-1">typo tittle-1</Typography>
+            <Typography variant="tittle-2">typo tittle-2</Typography>
+            <Typography variant="body-1">typo body-1</Typography>
+            <Typography variant="body-2">typo body-2</Typography>
+            <Typography variant="caption-1">typo caption-1</Typography>
+            <Typography variant="caption-2">typo caption-2</Typography>
+            <Typography variant="body-1" weight="black">
+              typo font-black
+            </Typography>
+            <Typography variant="body-1" weight="extrabold">
+              typo font-extrabold
+            </Typography>
+            <Typography variant="body-1" weight="bold">
+              typo font-bold
+            </Typography>
+            <Typography variant="body-1" weight="semibold">
+              typo font-semibold
+            </Typography>
+            <Typography variant="body-1" weight="medium">
+              typo font-medium
+            </Typography>
+            <Typography variant="body-1" weight="regular">
+              typo font-regular
+            </Typography>
+            <Typography variant="body-1" weight="light">
+              typo font-light
+            </Typography>
+          </div>
+
+          {/* Exemplos do Button Aprimorado */}
+          <Surface title="Button Aprimorado - Estados Básicos">
+            <div className="space-y-4 ">
+              <div className="space-y-2 ">
+                <Typography variant="tittle-2">Estados Básicos</Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton>Padrão</BaseButton>
+                  <BaseButton variant="outline">Outline</BaseButton>
+                  <BaseButton variant="ghost">Ghost</BaseButton>
+                  <BaseButton variant="danger">Danger</BaseButton>
+                  <BaseButton variant="ghostDanger">Ghost Danger</BaseButton>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="tittle-2">
+                  Estados Booleanos (CVA)
+                </Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton disabled>Desabilitado</BaseButton>
+                  <BaseButton loading>Carregando</BaseButton>
+                  <BaseButton fullWidth>Largura Completa</BaseButton>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="tittle-2">Combinações</Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton variant="outline" size="sm" disabled>
+                    Pequeno Desabilitado
+                  </BaseButton>
+                  <BaseButton variant="danger" size="lg" loading>
+                    Grande Carregando
+                  </BaseButton>
+                  <BaseButton variant="ghost" fullWidth>
+                    Ghost Largura Completa
+                  </BaseButton>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="tittle-2">
+                  Elementos Customizados
+                </Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton as="a" href="#link">
+                    Como Link
+                  </BaseButton>
+                  <BaseButton as="div" onClick={() => alert("Clicou!")}>
+                    Como Div (com onClick)
+                  </BaseButton>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="tittle-2">Loading States</Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton loading variant="default">
+                    Loading Padrão
+                  </BaseButton>
+                  <BaseButton loading variant="outline">
+                    Loading Outline
+                  </BaseButton>
+                  <BaseButton loading variant="danger">
+                    Loading Danger
+                  </BaseButton>
+                  <BaseButton loading variant="ghost">
+                    Loading Ghost
+                  </BaseButton>
+                </div>
+              </div>
+            </div>
           </Surface>
         </section>
       </main>
