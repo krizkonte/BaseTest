@@ -39,28 +39,24 @@
     font-size: var(--text-lg);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);
-    color: var(--text-color);
   }
 
   &.body-lg {
     font-size: var(--text-base);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);
-    color: var(--text-color);
   }
 
   &.body-md {
     font-size: var(--text-sm);
     line-height: var(--line-height-normal);
     font-weight: var(--font-weight-regular);
-    color: var(--text-color);
   }
 
   &.body-sm {
     font-size: var(--text-xs);
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-wide);
-    color: var(--text-color-secondary);
     font-weight: var(--font-weight-medium);
   }
 }

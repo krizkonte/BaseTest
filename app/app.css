@@ -3,11 +3,12 @@
 @import "./styles/primitives.css";
 @import "./styles/utilities-surface.css";
 @import "./styles/utilities-typography.css";
+@import "./styles/component.css";
 @plugin "./styles/border-plugin.js";
 
 :root {
   color-scheme: light dark;
-  --bg-app: light-dark(oklch(var(--neutral-100)), oklch(var(--neutral-950)));
+  --bg-app: light-dark(oklch(var(--neutral-200)), oklch(var(--neutral-950)));
 }
 
 html,

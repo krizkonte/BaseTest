@@ -1,5 +1,5 @@
 @layer component {
   .foundation-button {
-    @apply flex items-center justify-center gap-2 whitespace-nowrap;
+    @apply flex items-center justify-center gap-2 whitespace-nowrap select-none;
   }
 }

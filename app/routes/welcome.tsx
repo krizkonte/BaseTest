@@ -2,6 +2,127 @@ import React from "react";
 import BaseButton from "../components/base/BaseButton";
 import BasePopover from "../components/base/BasePopover";
 
+// Definindo os tipos para as props do ExampleContent
+interface ExampleContentProps {
+  title?: string;
+  showButtons?: boolean;
+  showLink?: boolean;
+  fullText?: boolean;
+}
+
+// Componente para agrupar os botões
+const ButtonGroup = ({
+  variant = "default",
+  disabled = false,
+  withPopover = false,
+  hideDefault = false,
+}) => {
+  const buttonProps = disabled ? { disabled: true } : {};
+
+  return (
+    <div className="flex flex-col gap-2 mt-4">
+      <div className="flex gap-2">
+        {!hideDefault && <BaseButton {...buttonProps}>Default</BaseButton>}
+        <BaseButton variant="outline" {...buttonProps}>
+          Outline
+        </BaseButton>
+        <BaseButton variant="ghost" {...buttonProps}>
+          Ghost
+        </BaseButton>
+        {withPopover && <BasePopover />}
+      </div>
+      {variant === "default" && (
+        <div className="flex gap-2">
+          <BaseButton variant="danger" {...buttonProps}>
+            Danger
+          </BaseButton>
+          <BaseButton variant="ghostDanger" {...buttonProps}>
+            Ghost Danger
+          </BaseButton>
+        </div>
+      )}
+      {variant === "default" && (
+        <div className="flex gap-2">
+          <BaseButton disabled>Disabled</BaseButton>
+          <BaseButton disabled variant="ghost">
+            Ghost Disabled
+          </BaseButton>
+          <BaseButton disabled variant="ghostDanger">
+            Ghost Danger Disabled
+          </BaseButton>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Componente para o conteúdo padrão de exemplo
+const ExampleContent: React.FC<ExampleContentProps> = ({
+  title,
+  showButtons = true,
+  fullText = true,
+}) => (
+  <>
+    {title && <strong>{title}</strong>}
+    <p className="text-default">Texto padrão</p>
+    <p className="text-secondary">Texto secundário</p>
+    {fullText && <p className="text-tertiary">Texto terciário</p>}
+    <p className="text-disabled">Texto desabilitado</p>
+    {fullText && (
+      <>
+        <p className="text-success">Operação realizada com sucesso!</p>
+        <p className="text-error">Ocorreu um erro.</p>
+        <p className="text-info">Sou uma informação relevante</p>
+        <p className="text-warning">Sou um aviso urgente!</p>
+      </>
+    )}
+    {fullText && (
+      <a href="#" className="text-link">
+        Clique aqui para ver o link
+      </a>
+    )}
+  </>
+);
+
+// Definindo os tipos para as props do Surface
+interface SurfaceProps extends React.HTMLAttributes<HTMLDivElement> {
+  variant?:
+    | "default"
+    | "inverted"
+    | "high"
+    | "low"
+    | "accent"
+    | "danger"
+    | "success"
+    | "info"
+    | "warning";
+  title?: string;
+  description?: string;
+  children?: React.ReactNode;
+}
+
+// Componente de superfície reutilizável
+const Surface: React.FC<SurfaceProps> = ({
+  variant = "default",
+  title,
+  description,
+  children,
+  className = "",
+  ...props
+}) => {
+  const baseClasses = "surface p-4 rounded shadow";
+  const variantClass = variant !== "default" ? ` ${variant}` : "";
+  const classes = `${baseClasses}${variantClass} ${className}`.trim();
+
+  return (
+    <div className={classes} {...props}>
+      {title && <strong>{title}</strong>}
+      {description && <p>{description}</p>}
+      {children}
+    </div>
+  );
+};
+
 export function Welcome() {
   // Estado para o tema atual
   const [theme, setTheme] = React.useState<"light" | "dark" | "system">(() => {
@@ -76,154 +197,54 @@ export function Welcome() {
       </div>
 
       <main className="flex flex-col items-center justify-center pt-16 pb-4 gap-4">
-        {/* Exemplos de superfícies */}
         <section className="flex flex-col gap-4 w-full max-w-2xl mt-8">
-          <div className="surface default p-4 rounded shadow">
-            <strong>.surface default</strong>
-            <p>Superfície padrão, adaptável ao tema.</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <p className="text-success">Operação realizada com sucesso!</p>
-            <p className="text-error">Ocorreu um erro.</p>
-            <p className="text-info">Sou uma informação relevante</p>
-            <p className="text-warning">Sou um aviso urgente!</p>
-            <a href="#" className="text-link">
-              Clique aqui para ver o link
-            </a>
-            <div className="flex flex-col gap-2 mt-4 *:flex *:gap-2 ">
-              <div>
-                <BaseButton>Default</BaseButton>
-                <BaseButton variant="outline">Outline</BaseButton>
-                <BaseButton variant="ghost">Ghost</BaseButton>
-              </div>
-              <div>
-                <BaseButton variant="danger">Danger</BaseButton>
-                <BaseButton variant="ghostDanger">Ghost Danger</BaseButton>
-              </div>
-              <div>
-                <BaseButton disabled>Disabled</BaseButton>
-                <BaseButton disabled variant="ghost">
-                  Ghost Disabled
-                </BaseButton>
-                <BaseButton disabled variant="ghostDanger">
-                  Ghost Danger Disabled
-                </BaseButton>
-              </div>
+          <Surface className="flex flex-col gap-4">
+            <div>
+              <ExampleContent title=".surface" fullText={true} />
+              <ButtonGroup variant="default" withPopover={true} />
             </div>
-          </div>
-          <div className="surface default inverted p-4 rounded shadow">
-            <strong>.surface inverted</strong>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <p className="text-success">Operação realizada com sucesso!</p>
-            <p className="text-error">Ocorreu um erro.</p>
-            <p className="text-info">Sou uma informação relevante</p>
-            <p className="text-warning">Sou um aviso urgente!</p>
-            <div className="flex flex-col gap-2 mt-4 *:flex *:gap-2 ">
-              <div>
-                <BaseButton>Default</BaseButton>
-                <BaseButton variant="outline">Outline</BaseButton>
-                <BaseButton variant="ghost">Ghost</BaseButton>
-              </div>
-              <div>
-                <BaseButton variant="danger">Danger</BaseButton>
-                <BaseButton variant="ghostDanger">Ghost Danger</BaseButton>
-              </div>
-              <div>
-                <BaseButton disabled>Disabled</BaseButton>
-                <BaseButton disabled variant="ghost">
-                  Ghost Disabled
-                </BaseButton>
-              </div>
-            </div>
-          </div>
-          <div className="surface accent p-4 rounded shadow">
-            <strong>.surface accent</strong>
-            <p>Superfície de destaque (accent/brand).</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <div className="flex gap-2 mt-4">
-              <BaseButton variant="outline">Outline</BaseButton>
-              <BaseButton variant="ghost">Ghost</BaseButton>
-            </div>
-          </div>
-          <div className="surface danger p-4 rounded shadow">
-            <strong>.surface danger</strong>
-            <p>Superfície de erro/alerta.</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <div className="flex gap-2 mt-4">
-              <BaseButton variant="outline">Outline</BaseButton>
-              <BaseButton variant="ghost">Ghost</BaseButton>
-            </div>
-          </div>
-          <div className="surface success p-4 rounded shadow">
-            <strong>.surface success</strong>
-            <p>Superfície de sucesso.</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <div className="flex gap-2 mt-4">
-              <BaseButton variant="outline">Outline</BaseButton>
-              <BaseButton variant="ghost">Ghost</BaseButton>
-            </div>
-          </div>
-          <div className="surface info p-4 rounded shadow">
-            <strong>.surface info</strong>
-            <p>Superfície informativa.</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <div className="flex gap-2 mt-4">
-              <BaseButton variant="outline">Outline</BaseButton>
-              <BaseButton variant="ghost">Ghost</BaseButton>
-            </div>
-          </div>
-          <div className="surface warning p-4 rounded shadow">
-            <strong>.surface warning</strong>
-            <p>Superfície de aviso.</p>
-            <p className="text-default">Texto padrão</p>
-            <p className="text-secondary">Texto secundário</p>
-            <p className="text-tertiary">Texto terciário</p>
-            <p className="text-disabled">Texto desabilitado</p>
-            <div className="flex gap-2 mt-4">
-              <BaseButton variant="outline">Outline</BaseButton>
-              <BaseButton variant="ghost">Ghost</BaseButton>
-            </div>
-          </div>
-        </section>
-        {/* Exemplos de Tipografia */}
-        <section className="flex flex-col gap-2 w-full max-w-md mt-8 p-4 rounded surface default">
-          <strong className="mb-2">Tipografia</strong>
-          <div className="typo">Heading - Título </div>
-          <div className="typo heading-1">Heading 1 - Título Principal</div>
-          <div className="typo heading-2">Heading 2 - Subtítulo</div>
-          <div className="typo heading-3">Heading 3 - Seção</div>
-          <div className="typo heading-4">Heading 4 - Sub-seção</div>
-          <div className="typo heading-5">Heading 5 - Legenda</div>
-          <div className="typo body-xl">
-            Body XL - Texto grande para destaque
-          </div>
-          <div className="typo body-lg">Body LG - Texto de corpo grande</div>
-          <div className="typo body-lg font-black">
-            Body LG Bold - Texto com peso black
-          </div>
-          <div className="typo body-md">
-            Body MD - Texto de corpo médio (padrão)
-          </div>
-          <div className="typo body-sm">
-            Body SM - Texto de corpo pequeno ou secundário
-          </div>
+            <Surface variant="high">
+              <ExampleContent title=".surface high" fullText={true} />
+              <ButtonGroup variant="default" withPopover={true} />{" "}
+            </Surface>
+            <Surface variant="low">
+              <ExampleContent title=".surface low" fullText={true} />
+              <ButtonGroup variant="default" withPopover={true} />{" "}
+            </Surface>
+          </Surface>
+
+          <Surface variant="inverted" className="low">
+            <ExampleContent title=".surface inverted low" fullText={true} />
+            <ButtonGroup variant="default" withPopover={true} />
+          </Surface>
+
+          <Surface variant="accent" title=".surface accent">
+            <ExampleContent fullText={false} />
+
+            <ButtonGroup variant="accent" hideDefault={true} />
+          </Surface>
+
+          <Surface variant="danger" title=".surface danger">
+            <ExampleContent fullText={false} />
+
+            <ButtonGroup variant="danger" hideDefault={true} />
+          </Surface>
+
+          <Surface variant="success" title=".surface success">
+            <ExampleContent fullText={false} />
+
+            <ButtonGroup variant="success" hideDefault={true} />
+          </Surface>
+
+          <Surface variant="info" title=".surface info">
+            <ExampleContent fullText={false} />
+            <ButtonGroup variant="info" hideDefault={true} />
+          </Surface>
+
+          <Surface variant="warning" title=".surface warning">
+            <ExampleContent fullText={false} />
+            <ButtonGroup variant="warning" hideDefault={true} />
+          </Surface>
         </section>
       </main>
     </>

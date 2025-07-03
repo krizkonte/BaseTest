@@ -7,33 +7,30 @@ import { useForceActive } from "../../lib/useForceActive";
 function classMerge(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
-const buttonVariants = cva(
-  "foundation-button interactive font-semibold select-none",
-  {
-    variants: {
-      variant: {
-        default: "surface accent",
-        outline: "ghost border-1 border-medium",
-        ghost: "ghost",
+const buttonVariants = cva("foundation-button interactive font-semibold", {
+  variants: {
+    variant: {
+      default: "surface accent",
+      outline: "ghost border-1 border-medium",
+      ghost: "ghost",
 
-        danger: "surface danger",
-        ghostDanger: "ghost danger",
+      danger: "surface danger",
+      ghostDanger: "ghost danger",
 
-        link: "int-text-link",
-      },
-      size: {
-        default: "h-8 px-3 rounded-sm",
-        sm: "h-6 px-2 rounded-sm",
-        lg: "h-10.5 px-4.5 rounded-lg",
-        icon: "size-8",
-      },
+      link: "int-text-link",
     },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
+    size: {
+      default: "h-8 px-3 rounded-sm",
+      sm: "h-6 px-2 rounded-sm",
+      lg: "h-10.5 px-4.5 rounded-lg",
+      icon: "size-8",
     },
-  }
-);
+  },
+  defaultVariants: {
+    variant: "default",
+    size: "default",
+  },
+});
 
 export interface ButtonProps extends VariantProps<typeof buttonVariants> {
   asChild?: boolean;

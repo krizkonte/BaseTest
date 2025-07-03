@@ -5,48 +5,51 @@ for child elements to adapt their text and interaction colors.
 ========================================================================== */
 @utility surface {
   /* Base surface properties that all surfaces inherit */
+  --surface-bg: light-dark(oklch(var(--neutral-50)), oklch(var(--neutral-800)));
+
+  /* Contextual Variables for Children */
+  --text-color: light-dark(oklch(var(--neutral-900)), oklch(var(--neutral-50)));
+  --text-color-secondary: light-dark(
+    oklch(var(--neutral-700)),
+    oklch(var(--neutral-200) / var(--opacity-90))
+  );
+  --text-color-tertiary: light-dark(
+    oklch(var(--neutral-600) / var(--opacity-90)),
+    oklch(var(--neutral-400))
+  );
+  --text-color-disabled: light-dark(
+    oklch(var(--neutral-500) / var(--opacity-70)),
+    oklch(var(--neutral-400) / var(--opacity-60))
+  );
+
+  --bg-hover-ghost: light-dark(
+    oklch(var(--brand-200)/ var(--opacity-50)),
+    oklch(var(--brand-400) / var(--opacity-30))
+  );
+  --bg-active-ghost: light-dark(
+    oklch(var(--brand-500) / var(--opacity-30)),
+    oklch(var(--brand-700) / var(--opacity-30))
+  );
+  --text-color-hover-ghost: light-dark(
+    oklch(var(--brand-700)),
+    oklch(var(--brand-50))
+  );
+
   background-color: var(--surface-bg);
   color: var(--text-color);
 
   /* --------------------------------------------------------------------------
-   *  Default Surface
+   *  Surface elevation
    *  The standard background for the application.
    * -------------------------------------------------------------------------- */
-  &.default {
+  &.high {
+    --surface-bg: light-dark(oklch(var(--white)), oklch(var(--neutral-700)));
+  }
+
+  &.low {
     --surface-bg: light-dark(
-      oklch(var(--neutral-50)),
+      oklch(var(--neutral-100)),
       oklch(var(--neutral-900))
-    );
-
-    /* Contextual Variables for Children */
-    --text-color: light-dark(
-      oklch(var(--neutral-900)),
-      oklch(var(--neutral-50))
-    );
-    --text-color-secondary: light-dark(
-      oklch(var(--neutral-700)),
-      oklch(var(--neutral-200) / var(--opacity-90))
-    );
-    --text-color-tertiary: light-dark(
-      oklch(var(--neutral-600) / var(--opacity-90)),
-      oklch(var(--neutral-400))
-    );
-    --text-color-disabled: light-dark(
-      oklch(var(--neutral-500) / var(--opacity-70)),
-      oklch(var(--neutral-400) / var(--opacity-60))
-    );
-
-    --bg-hover-ghost: light-dark(
-      oklch(var(--brand-300) / var(--opacity-30)),
-      oklch(var(--brand-400) / var(--opacity-30))
-    );
-    --bg-active-ghost: light-dark(
-      oklch(var(--brand-500) / var(--opacity-10)),
-      oklch(var(--brand-500) / var(--opacity-10))
-    );
-    --text-color-hover-ghost: light-dark(
-      oklch(var(--brand-700)),
-      oklch(var(--brand-50))
     );
   }
 
@@ -89,7 +92,7 @@ for child elements to adapt their text and interaction colors.
     --text-color-disabled: oklch(var(--danger-100) / var(--opacity-70));
 
     --bg-hover: light-dark(
-      oklch(var(--danger-500) / var(--opacity-90)),
+      oklch(var(--danger-400)),
       oklch(var(--danger-500))
     );
     --bg-active: oklch(var(--danger-600));
@@ -167,6 +170,7 @@ for child elements to adapt their text and interaction colors.
     --bg-active: oklch(var(--warning-600));
     --bg-hover-ghost: oklch(var(--warning-50) / var(--opacity-30));
     --bg-active-ghost: oklch(var(--warning-50) / var(--opacity-20));
+    --text-color-hover-ghost: oklch(var(--warning-900))
   }
 }
 
@@ -235,11 +239,10 @@ CONTEXTUAL INTERACTION LAYERS
 @utility interactive {
   --bg-disabled: oklch(var(--neutral-400) / var(--opacity-60));
   cursor: pointer;
-  will-change: auto;  
+  will-change: auto;
   transition: all 150ms ease-in;
 
   &:hover:not(:disabled) {
-
     background-color: var(--bg-hover);
     color: var(--text-color);
   }
@@ -248,7 +251,6 @@ CONTEXTUAL INTERACTION LAYERS
     transition: all 150ms ease-out;
     background-color: var(--bg-active);
     transform: scale(0.98);
-
   }
   &:disabled {
     background-color: var(--bg-disabled);
@@ -260,7 +262,6 @@ CONTEXTUAL INTERACTION LAYERS
     background-color: transparent;
   }
   &.ghost:hover:not(:disabled) {
-
     background-color: var(--bg-hover-ghost);
     color: var(--text-color-hover-ghost);
   }
@@ -289,7 +290,6 @@ CONTEXTUAL INTERACTION LAYERS
   }
 }
 
-
 /* --------------------------------------------------------------------------
 ACESSIBILIDADE
 -------------------------------------------------------------------------- */
@@ -297,27 +297,28 @@ ACESSIBILIDADE
 @media (prefers-reduced-motion: reduce) {
   .interactive {
     transition: none;
-  }}
-
-  @media (hover: none) {
-    .interactive {
-      will-change: auto;  
-    }
-    
-    .interactive:active:not(:disabled) {
-      background-color: var(--bg-hover, var(--bg-active));
-      transform: scale(0.95);
-    }
-    
-    .interactive.ghost:active:not(:disabled) {
-      background-color: var(--bg-hover-ghost, var(--bg-active-ghost));
-      transform: scale(0.95);
-    }
-    .interactive.ghost.danger:active:not(:disabled) {
-      background-color:  light-dark(
-        oklch(var(--danger-300) / var(--opacity-30)),
-        oklch(var(--danger-700) / var(--opacity-30))
-      );
-      transform: scale(0.95);
-    }
   }
+}
+
+@media (hover: none) {
+  .interactive {
+    will-change: auto;
+  }
+
+  .interactive:active:not(:disabled) {
+    background-color: var(--bg-hover, var(--bg-active));
+    transform: scale(0.95);
+  }
+
+  .interactive.ghost:active:not(:disabled) {
+    background-color: var(--bg-hover-ghost, var(--bg-active-ghost));
+    transform: scale(0.95);
+  }
+  .interactive.ghost.danger:active:not(:disabled) {
+    background-color: light-dark(
+      oklch(var(--danger-300) / var(--opacity-30)),
+      oklch(var(--danger-700) / var(--opacity-30))
+    );
+    transform: scale(0.95);
+  }
+}

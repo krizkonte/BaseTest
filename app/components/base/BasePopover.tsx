@@ -1,23 +1,30 @@
 import { Popover } from "@base-ui-components/react/popover";
+import { useForceActive } from "../../lib/useForceActive";
 
 type BasePopoverProps = {
   description?: React.ReactNode;
 };
 
 export default function BasePopover({ description }: BasePopoverProps) {
+  const [triggerRef, forceActiveHandlers] =
+    useForceActive<HTMLButtonElement>(150);
   return (
     <Popover.Root>
-      <Popover.Trigger className="foundation-button int-layer-accent size-[32px] rounded-md">
+      <Popover.Trigger
+        ref={triggerRef}
+        className="foundation-button surface accent interactive rounded-md size-8"
+        {...forceActiveHandlers}
+      >
         <BellIcon aria-label="Notificações" className="w-5 h-5" />
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Positioner sideOffset={8}>
-          <Popover.Popup className="surface-high rounded-md shadow-2xl p-4 min-w-[220px]">
+          <Popover.Popup className="surface high rounded-md shadow-2xl p-4 min-w-[220px] border-weak border-1">
             <Popover.Arrow className="block" />
-            <Popover.Title className="font-semibold text-base mb-1 text-on-surface-strong">
+            <Popover.Title className="typo heading-3 font-semibold mb-1">
               Notificações
             </Popover.Title>
-            <Popover.Description className="text-on-surface text-sm">
+            <Popover.Description className="typo body-md text-tertiary">
               {description || "Você está em dia. Bom trabalho!"}
             </Popover.Description>
             <Popover.Close />
