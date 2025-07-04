@@ -2,6 +2,8 @@ import React from "react";
 import BaseButton from "../components/base/Button";
 import BasePopover from "../components/base/Popover";
 import { Typography } from "../components/custom/Typography";
+import { Loader } from "../components/custom/Loader";
+import TextField from "../components/base/Field";
 
 // Definindo os tipos para as props do ExampleContent
 interface ExampleContentProps {
@@ -68,8 +70,8 @@ const ExampleContent: React.FC<ExampleContentProps> = ({
 }) => (
   <>
     {title && (
-      <Typography variant="heading-1" asChild>
-        <strong>{title}</strong>
+      <Typography variant="heading-1" as="strong">
+        {title}
       </Typography>
     )}
     <Typography variant="body-1">Texto padrão</Typography>
@@ -259,14 +261,17 @@ export function Welcome() {
             <div>
               <ExampleContent title=".surface" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />
+              <TextField></TextField>
             </div>
             <Surface variant="high">
               <ExampleContent title=".surface high" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
+              <TextField></TextField>
             </Surface>
             <Surface variant="low">
               <ExampleContent title=".surface low" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
+              <TextField></TextField>
             </Surface>
           </Surface>
 
@@ -375,8 +380,8 @@ export function Welcome() {
           <div className="p-6 mb-4 flex flex-col gap-1 surface rounded-md">
             <Typography variant="heading-1">typo heading-1</Typography>
             <Typography variant="heading-2">typo heading-2</Typography>
-            <Typography variant="tittle-1">typo tittle-1</Typography>
-            <Typography variant="tittle-2">typo tittle-2</Typography>
+            <Typography variant="title-1">typo title-1</Typography>
+            <Typography variant="title-2">typo title-2</Typography>
             <Typography variant="body-1">typo body-1</Typography>
             <Typography variant="body-2">typo body-2</Typography>
             <Typography variant="caption-1">typo caption-1</Typography>
@@ -408,7 +413,7 @@ export function Welcome() {
           <Surface title="Button Aprimorado - Estados Básicos">
             <div className="space-y-4 ">
               <div className="space-y-2 ">
-                <Typography variant="tittle-2">Estados Básicos</Typography>
+                <Typography variant="title-2">Estados Básicos</Typography>
                 <div className="flex gap-2 flex-wrap">
                   <BaseButton>Padrão</BaseButton>
                   <BaseButton variant="outline">Outline</BaseButton>
@@ -419,7 +424,7 @@ export function Welcome() {
               </div>
 
               <div className="space-y-2">
-                <Typography variant="tittle-2">
+                <Typography variant="title-2">
                   Estados Booleanos (CVA)
                 </Typography>
                 <div className="flex gap-2 flex-wrap">
@@ -430,7 +435,7 @@ export function Welcome() {
               </div>
 
               <div className="space-y-2">
-                <Typography variant="tittle-2">Combinações</Typography>
+                <Typography variant="title-2">Combinações</Typography>
                 <div className="flex gap-2 flex-wrap">
                   <BaseButton variant="outline" size="sm" disabled>
                     Pequeno Desabilitado
@@ -445,7 +450,7 @@ export function Welcome() {
               </div>
 
               <div className="space-y-2">
-                <Typography variant="tittle-2">
+                <Typography variant="title-2">
                   Elementos Customizados
                 </Typography>
                 <div className="flex gap-2 flex-wrap">
@@ -459,7 +464,9 @@ export function Welcome() {
               </div>
 
               <div className="space-y-2">
-                <Typography variant="tittle-2">Loading States</Typography>
+                <Typography variant="title-2">
+                  Loading States (Otimizados)
+                </Typography>
                 <div className="flex gap-2 flex-wrap">
                   <BaseButton loading variant="default">
                     Loading Padrão
@@ -474,6 +481,22 @@ export function Welcome() {
                     Loading Ghost
                   </BaseButton>
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Loader Component</Typography>
+                <div className="flex gap-4 items-center">
+                  <Loader size="sm" />
+                  <Loader size="default" />
+                  <Loader size="lg" />
+                  <Loader size="xl" />
+                  <Loader size="default" spacing="none" />
+                  <Loader size="default" spacing="right" />
+                </div>
+                <Typography variant="caption-1" color="secondary">
+                  Componente Loader reutilizável com diferentes tamanhos e
+                  espaçamentos
+                </Typography>
               </div>
             </div>
           </Surface>

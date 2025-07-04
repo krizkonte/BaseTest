@@ -14,13 +14,13 @@
     font-weight: var(--font-weight-semibold);
   }
 
-  &.tittle-1 {
+  &.title-1 {
     font-size: var(--text-lg);
     line-height: var(--line-height-snug);
     font-weight: var(--font-weight-semibold);
   }
 
-  &.tittle-2 {
+  &.title-2 {
     font-size: var(--text-base);
     line-height: var(--line-height-normal);
     font-weight: var(--font-weight-semibold);

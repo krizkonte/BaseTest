@@ -1,11 +1,12 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Slot } from "../custom/Slot";
+import { Loader } from "../custom/Loader";
 import { useForceActive } from "../../lib/useForceActive";
-import { classMerge } from "../../lib/classMerge";
+import { useRender } from "@base-ui-components/react/use-render";
+import { mergeProps } from "@base-ui-components/react/merge-props";
 
 /**
- * Variantes do botão usando CVA para melhor DX e organização
+ * Variantes do botão usando CVA
  * - variant: Estilo visual do botão
  *   - default: Surface brand (padrão)
  *   - outline: Ghost com borda
@@ -33,7 +34,7 @@ const buttonVariants = cva("foundation-button interactive font-semibold", {
       icon: "size-8",
     },
     loading: {
-      true: "opacity-70 pointer-events-none",
+      true: "opacity-80 pointer-events-none pl-1",
     },
     fullWidth: {
       true: "w-full",
@@ -46,7 +47,7 @@ const buttonVariants = cva("foundation-button interactive font-semibold", {
 });
 
 export interface ButtonProps extends VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
+  render?: React.ReactNode;
   loading?: boolean;
   fullWidth?: boolean;
   disabled?: boolean;
@@ -54,7 +55,7 @@ export interface ButtonProps extends VariantProps<typeof buttonVariants> {
 }
 
 type BaseButtonProps = ButtonProps &
-  React.ComponentPropsWithoutRef<typeof Slot> &
+  React.ComponentPropsWithoutRef<typeof Loader> &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 /**
@@ -64,45 +65,51 @@ type BaseButtonProps = ButtonProps &
  * - Suporte a elementos customizados (as prop) com acessibilidade
  * - DX melhorada com menos boilerplate
  */
-const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
-  (
-    {
-      className,
-      variant,
-      size,
-      asChild = false,
-      loading = false,
-      fullWidth = false,
-      disabled = false,
-      onMouseDown,
-      as,
-      ...props
-    },
-    ref
-  ) => {
-    // Passa o ref externo e handlers para o hook compor automaticamente
-    const [btnRef, forceActiveHandlers] = useForceActive<HTMLButtonElement>(
-      150,
-      ref,
-      onMouseDown ? { onMouseDown } : undefined
-    );
+const BaseButton = React.memo(
+  React.forwardRef<HTMLButtonElement, BaseButtonProps>(
+    (
+      {
+        className,
+        variant,
+        size,
+        render,
+        loading = false,
+        fullWidth = false,
+        disabled = false,
+        onMouseDown,
+        as,
+        ...props
+      },
+      ref
+    ) => {
+      // Passa o ref externo e handlers para o hook compor automaticamente
+      const [btnRef, forceActiveHandlers] = useForceActive<HTMLButtonElement>(
+        150,
+        ref,
+        onMouseDown ? { onMouseDown } : undefined
+      );
 
-    const Comp = asChild ? Slot : as || "button";
-    const isButton = Comp === "button";
-    const isDisabled = disabled || loading;
+      // Definir elemento padrão
+      const DefaultElement = as || "button";
+      const isButton = DefaultElement === "button";
+      const isDisabled = disabled || loading;
 
-    // Atributos de acessibilidade simplificados usando spread condicional
-    const accessibilityProps = {
-      ...(loading && { "aria-busy": true }),
-      ...(!isButton && isDisabled && { "aria-disabled": true }),
-      ...(!isButton && { role: "button", tabIndex: 0 }),
-      ...(isButton && { disabled: isDisabled }),
-    };
+      // Atributos de acessibilidade memoizados
+      const accessibilityProps = React.useMemo(
+        () => ({
+          ...(loading && { "aria-busy": true }),
+          ...(!isButton && isDisabled && { "aria-disabled": true }),
+          ...(!isButton && { role: "button", tabIndex: 0 }),
+          ...(isButton && { disabled: isDisabled }),
+        }),
+        [loading, isButton, isDisabled]
+      );
 
-    // Handler de teclado apenas para elementos não-button (Enter/Espaço)
-    const handleKeyDown = !isButton
-      ? (e: React.KeyboardEvent) => {
+      // Handler de teclado otimizado com useCallback
+      const handleKeyDown = React.useCallback(
+        (e: React.KeyboardEvent) => {
           if (
+            !isButton &&
             (e.key === "Enter" || e.key === " ") &&
             props.onClick &&
             !isDisabled
@@ -110,28 +117,52 @@ const BaseButton = React.forwardRef<HTMLButtonElement, BaseButtonProps>(
             e.preventDefault();
             props.onClick(e as any);
           }
-        }
-      : undefined;
+        },
+        [isButton, props.onClick, isDisabled]
+      );
 
-    return (
-      <Comp
-        ref={btnRef}
-        className={classMerge(
+      // Classe CSS memorizada
+      const buttonClassName = React.useMemo(
+        () =>
           buttonVariants({
             variant,
             size,
             loading,
             fullWidth,
             className,
-          })
-        )}
-        {...forceActiveHandlers}
-        onKeyDown={handleKeyDown}
-        {...accessibilityProps}
-        {...props}
-      />
-    );
-  }
+          }),
+        [variant, size, loading, fullWidth, className]
+      );
+
+      // Extraia children de props antes do merge
+      const { children, ...restProps } = props;
+
+      // Conteúdo do botão: Loader + children
+      const buttonChildren = (
+        <>
+          {loading && <Loader size="default" aria-hidden="true" />}
+          {children}
+        </>
+      );
+
+      // Props padrão do botão
+      const defaultProps = {
+        ref: btnRef,
+        className: buttonClassName,
+        onKeyDown: handleKeyDown,
+        ...accessibilityProps,
+        ...forceActiveHandlers,
+        children: buttonChildren,
+      };
+
+      const element = useRender({
+        render: render || <DefaultElement />,
+        props: mergeProps(defaultProps, restProps),
+      });
+
+      return element;
+    }
+  )
 );
 BaseButton.displayName = "BaseButton";
 
