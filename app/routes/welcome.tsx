@@ -3,7 +3,14 @@ import BaseButton from "../components/base/Button";
 import BasePopover from "../components/base/Popover";
 import { Typography } from "../components/custom/Typography";
 import { Loader } from "../components/custom/Loader";
-import TextField from "../components/base/Field";
+import { Icon } from "../components/custom/Icon";
+import { Plus, Trash2, Settings, Download, Bell, Search } from "lucide-react";
+import {
+  TextField,
+  TextareaField,
+  EmailField,
+  PasswordField,
+} from "../components/base/Field";
 
 // Definindo os tipos para as props do ExampleContent
 interface ExampleContentProps {
@@ -261,17 +268,17 @@ export function Welcome() {
             <div>
               <ExampleContent title=".surface" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />
-              <TextField></TextField>
+              <TextField name="example1" label="Campo de exemplo" />
             </div>
             <Surface variant="high">
               <ExampleContent title=".surface high" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
-              <TextField></TextField>
+              <TextField name="example2" label="Campo de exemplo" />
             </Surface>
             <Surface variant="low">
               <ExampleContent title=".surface low" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
-              <TextField></TextField>
+              <TextField name="example3" label="Campo de exemplo" />
             </Surface>
           </Surface>
 
@@ -484,6 +491,60 @@ export function Welcome() {
               </div>
 
               <div className="space-y-2">
+                <Typography variant="title-2">Ícones em Botões</Typography>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton icon={Plus}>Adicionar Item</BaseButton>
+                  <BaseButton icon={Download} variant="outline">
+                    Download
+                  </BaseButton>
+                  <BaseButton icon={Trash2} variant="danger">
+                    Excluir
+                  </BaseButton>
+                  <BaseButton icon={Settings} variant="ghost">
+                    Configurações
+                  </BaseButton>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  <BaseButton icon={Plus} size="sm">
+                    Pequeno
+                  </BaseButton>
+                  <BaseButton icon={Download} size="lg">
+                    Grande
+                  </BaseButton>
+                  <BaseButton
+                    icon={Settings}
+                    iconOnly
+                    aria-label="Configurações"
+                  />
+                  <BaseButton
+                    icon={Bell}
+                    iconOnly
+                    variant="outline"
+                    aria-label="Notificações"
+                  />
+                </div>
+                <Typography variant="caption-1" color="secondary">
+                  Ícones Lucide React integrados com tamanhos automáticos
+                </Typography>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Icon Component</Typography>
+                <div className="flex gap-4 items-center">
+                  <Icon icon={Search} size="sm" />
+                  <Icon icon={Settings} size="default" />
+                  <Icon icon={Download} size="lg" />
+                  <Icon icon={Bell} size="xl" />
+                  <Icon icon={Plus} size="default" />
+                  <Icon icon={Trash2} size="default" />
+                </div>
+                <Typography variant="caption-1" color="secondary">
+                  Componente Icon reutilizável com diferentes tamanhos e
+                  espaçamentos
+                </Typography>
+              </div>
+
+              <div className="space-y-2">
                 <Typography variant="title-2">Loader Component</Typography>
                 <div className="flex gap-4 items-center">
                   <Loader size="sm" />
@@ -497,6 +558,105 @@ export function Welcome() {
                   Componente Loader reutilizável com diferentes tamanhos e
                   espaçamentos
                 </Typography>
+              </div>
+            </div>
+          </Surface>
+
+          {/* Exemplos dos Campos */}
+          <Surface title="Campos de Formulário - Fase 1">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <Typography variant="title-2">TextField</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <TextField
+                    name="username"
+                    label="Nome de usuário"
+                    placeholder="Digite seu nome"
+                    required
+                  />
+                  <TextField
+                    name="description"
+                    label="Descrição"
+                    placeholder="Digite uma descrição"
+                    description="Campo opcional para descrição adicional"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">TextareaField</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <TextareaField
+                    name="bio"
+                    label="Biografia"
+                    placeholder="Conte um pouco sobre você..."
+                    rows={4}
+                  />
+                  <TextareaField
+                    name="notes"
+                    label="Observações"
+                    placeholder="Digite suas observações"
+                    description="Campo para observações adicionais"
+                    rows={3}
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">EmailField</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <EmailField
+                    name="email"
+                    label="Email"
+                    placeholder="seu@email.com"
+                    required
+                    validateOnBlur
+                  />
+                  <EmailField
+                    name="secondaryEmail"
+                    label="Email secundário"
+                    placeholder="email@exemplo.com"
+                    description="Email opcional para notificações"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">PasswordField</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <PasswordField
+                    name="password"
+                    label="Senha"
+                    placeholder="Digite sua senha"
+                    required
+                    showToggle
+                  />
+                  <PasswordField
+                    name="confirmPassword"
+                    label="Confirmar senha"
+                    placeholder="Confirme sua senha"
+                    required
+                    showToggle
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Estados dos Campos</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <TextField
+                    name="disabled"
+                    label="Campo desabilitado"
+                    placeholder="Não é possível editar"
+                    disabled
+                  />
+                  <TextField
+                    name="error"
+                    label="Campo com erro"
+                    placeholder="Digite algo"
+                    error="Este campo é obrigatório"
+                  />
+                </div>
               </div>
             </div>
           </Surface>
