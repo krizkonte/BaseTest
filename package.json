@@ -4,12 +4,14 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
+    "build:staging": "VITE_ENV=staging react-router build",
     "dev": "react-router dev",
+    "dev:staging": "VITE_ENV=staging react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
     "predeploy": "react-router build",
     "deploy": "gh-pages -d build/client",
-    "postbuild": "copy build\\client\\index.html build\\client\\404.html"
+    "postbuild": "copy build\\client\\index.html build\\client\\404.html && echo '' > build\\client\\.nojekyll"
   },
   "dependencies": {
     "@base-ui-components/react": "^1.0.0-beta.0",
@@ -29,6 +31,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "gh-pages": "^6.3.0",
+    "rollup-plugin-visualizer": "^6.0.3",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",

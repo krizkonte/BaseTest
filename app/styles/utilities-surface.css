@@ -531,6 +531,23 @@ CONTEXTUAL INTERACTION LAYERS
 }
 
 /* --------------------------------------------------------------------------
+placeholder
+-------------------------------------------------------------------------- */
+::placeholder {
+  color: var(--text-color-tertiary);
+  opacity: 1; /* Necessário para Firefox */
+}
+
+::-webkit-input-placeholder {
+  color: var(--text-color-tertiary);
+}
+
+::-moz-placeholder {
+  color: var(--text-color-tertiary);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
 ACESSIBILIDADE
 -------------------------------------------------------------------------- */
 

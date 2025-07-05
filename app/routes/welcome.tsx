@@ -1,10 +1,19 @@
 import React from "react";
 import BaseButton from "../components/base/Button";
 import BasePopover from "../components/base/Popover";
+import Checkbox from "../components/base/Checkbox";
 import { Typography } from "../components/custom/Typography";
 import { Loader } from "../components/custom/Loader";
 import { Icon } from "../components/custom/Icon";
-import { Plus, Trash2, Settings, Download, Bell, Search } from "lucide-react";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "../components/base/Card";
+
 import {
   TextField,
   TextareaField,
@@ -268,17 +277,14 @@ export function Welcome() {
             <div>
               <ExampleContent title=".surface" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />
-              <TextField name="example1" label="Campo de exemplo" />
             </div>
             <Surface variant="high">
               <ExampleContent title=".surface high" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
-              <TextField name="example2" label="Campo de exemplo" />
             </Surface>
             <Surface variant="low">
               <ExampleContent title=".surface low" fullText={true} />
               <ButtonGroup variant="default" withPopover={true} />{" "}
-              <TextField name="example3" label="Campo de exemplo" />
             </Surface>
           </Surface>
 
@@ -493,31 +499,31 @@ export function Welcome() {
               <div className="space-y-2">
                 <Typography variant="title-2">Ícones em Botões</Typography>
                 <div className="flex gap-2 flex-wrap">
-                  <BaseButton icon={Plus}>Adicionar Item</BaseButton>
-                  <BaseButton icon={Download} variant="outline">
+                  <BaseButton icon="Plus">Adicionar Item</BaseButton>
+                  <BaseButton icon="Download" variant="outline">
                     Download
                   </BaseButton>
-                  <BaseButton icon={Trash2} variant="danger">
+                  <BaseButton icon="Trash2" variant="danger">
                     Excluir
                   </BaseButton>
-                  <BaseButton icon={Settings} variant="ghost">
+                  <BaseButton icon="Settings" variant="ghost">
                     Configurações
                   </BaseButton>
                 </div>
                 <div className="flex gap-2 flex-wrap">
-                  <BaseButton icon={Plus} size="sm">
+                  <BaseButton icon="Plus" size="sm">
                     Pequeno
                   </BaseButton>
-                  <BaseButton icon={Download} size="lg">
+                  <BaseButton icon="Download" size="lg">
                     Grande
                   </BaseButton>
                   <BaseButton
-                    icon={Settings}
+                    icon="Settings"
                     iconOnly
                     aria-label="Configurações"
                   />
                   <BaseButton
-                    icon={Bell}
+                    icon="Bell"
                     iconOnly
                     variant="outline"
                     aria-label="Notificações"
@@ -531,12 +537,12 @@ export function Welcome() {
               <div className="space-y-2">
                 <Typography variant="title-2">Icon Component</Typography>
                 <div className="flex gap-4 items-center">
-                  <Icon icon={Search} size="sm" />
-                  <Icon icon={Settings} size="default" />
-                  <Icon icon={Download} size="lg" />
-                  <Icon icon={Bell} size="xl" />
-                  <Icon icon={Plus} size="default" />
-                  <Icon icon={Trash2} size="default" />
+                  <Icon icon="Search" size="sm" />
+                  <Icon icon="Settings" size="default" />
+                  <Icon icon="Download" size="lg" />
+                  <Icon icon="Bell" size="xl" />
+                  <Icon icon="Plus" size="default" />
+                  <Icon icon="Trash2" size="default" />
                 </div>
                 <Typography variant="caption-1" color="secondary">
                   Componente Icon reutilizável com diferentes tamanhos e
@@ -656,6 +662,242 @@ export function Welcome() {
                     placeholder="Digite algo"
                     error="Este campo é obrigatório"
                   />
+                </div>
+              </div>
+            </div>
+          </Surface>
+
+          {/* Exemplos do Componente Card */}
+          <Surface title="Componente Card - Base-UI">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <Typography variant="title-2">Card Básico</Typography>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Card Padrão</CardTitle>
+                    <CardDescription>
+                      Este é um exemplo de card básico com header, conteúdo e
+                      footer.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Typography variant="body-2">
+                      O conteúdo do card pode conter qualquer elemento React.
+                      Este card demonstra a estrutura básica com header, content
+                      e footer.
+                    </Typography>
+                  </CardContent>
+                  <CardFooter>
+                    <BaseButton>Ação</BaseButton>
+                    <BaseButton variant="ghost">Cancelar</BaseButton>
+                  </CardFooter>
+                </Card>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Cards em Grid</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Card 1</CardTitle>
+                      <CardDescription>Primeiro card do grid</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Typography variant="body-2">
+                        Cards podem ser organizados em layouts responsivos.
+                      </Typography>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Card 2</CardTitle>
+                      <CardDescription>Segundo card do grid</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Typography variant="body-2">
+                        Cada card mantém sua estrutura independente.
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Card com Estados</Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Card className="surface subtle danger border-surface">
+                    <CardHeader>
+                      <CardTitle>Perigo</CardTitle>
+                      <CardDescription>
+                        Ação destrutiva ou erro crítico
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Icon icon="XCircle" size="lg" className="text-error" />
+                    </CardContent>
+                  </Card>
+
+                  <Card className="surface subtle info border-surface">
+                    <CardHeader>
+                      <CardTitle>Informação</CardTitle>
+                      <CardDescription>Informação relevante</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <Icon icon="Info" size="lg" className="text-info" />
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Card Interativo</Typography>
+                <Card
+                  className="cursor-pointer hover:shadow-lg transition-shadow"
+                  onClick={() => alert("Card clicado!")}
+                >
+                  <CardHeader>
+                    <CardTitle>Card Clicável</CardTitle>
+                    <CardDescription>
+                      Este card responde a interações do usuário.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Typography variant="body-2">
+                      Clique no card para ver a interação. O componente mantém
+                      todas as props HTML nativas.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Card de Login</Typography>
+                <Card className="max-w-md mx-auto">
+                  <CardHeader>
+                    <CardTitle size="heading-2">Entrar</CardTitle>
+                    <CardDescription>
+                      Digite suas credenciais para acessar sua conta
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <EmailField
+                      name="email"
+                      label="Email"
+                      placeholder="seu@email.com"
+                      required
+                    />
+                    <PasswordField
+                      name="password"
+                      label="Senha"
+                      placeholder="Digite sua senha"
+                      required
+                      showToggle
+                    />
+                    <div className="flex items-center justify-between">
+                      <Checkbox label="Lembrar de mim" defaultChecked={false} />
+                      <a href="#" className="text-link typo caption-1">
+                        Esqueceu a senha?
+                      </a>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex-col space-y-3">
+                    <BaseButton className="w-full">Entrar</BaseButton>
+                    <div className="text-center">
+                      <Typography variant="caption-1" color="secondary">
+                        Não tem uma conta?{" "}
+                        <a href="#" className="text-link">
+                          Cadastre-se
+                        </a>
+                      </Typography>
+                    </div>
+                  </CardFooter>
+                </Card>
+              </div>
+            </div>
+          </Surface>
+
+          {/* Exemplos do Componente Checkbox */}
+          <Surface title="Componente Checkbox - Base-UI">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <Typography variant="title-2">Estados Básicos</Typography>
+                <div className="flex flex-wrap gap-4">
+                  <Checkbox label="Checkbox padrão" />
+                  <Checkbox label="Checkbox marcado" defaultChecked />
+                  <Checkbox label="Checkbox desabilitado" disabled />
+                  <Checkbox
+                    label="Checkbox desabilitado marcado"
+                    disabled
+                    defaultChecked
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">
+                  Checkbox em Diferentes Superfícies
+                </Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Surface variant="subtle" className="brand">
+                    <Typography variant="title-2">Superfície Brand</Typography>
+                    <div className="space-y-2 mt-2">
+                      <Checkbox label="Opção 1" />
+                      <Checkbox label="Opção 2" defaultChecked />
+                      <Checkbox label="Opção 3" />
+                    </div>
+                  </Surface>
+
+                  <Surface variant="subtle" className="danger">
+                    <Typography variant="title-2">Superfície Danger</Typography>
+                    <div className="space-y-2 mt-2">
+                      <Checkbox label="Confirmar exclusão" />
+                      <Checkbox label="Não mostrar novamente" />
+                    </div>
+                  </Surface>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">Checkbox com Children</Typography>
+                <div className="space-y-2">
+                  <Checkbox>
+                    <Typography variant="body-2">
+                      Aceito os{" "}
+                      <a href="#" className="text-link">
+                        termos de uso
+                      </a>{" "}
+                      e
+                      <a href="#" className="text-link">
+                        {" "}
+                        política de privacidade
+                      </a>
+                    </Typography>
+                  </Checkbox>
+
+                  <Checkbox>
+                    <div className="flex flex-col gap-1">
+                      <Typography variant="caption-1" weight="semibold">
+                        Receber notificações
+                      </Typography>
+                      <Typography variant="caption-1" color="secondary">
+                        Seremos discretos, prometemos!
+                      </Typography>
+                    </div>
+                  </Checkbox>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Typography variant="title-2">
+                  Checkbox com Elemento Customizado
+                </Typography>
+                <div className="space-y-2">
+                  <Checkbox as="div" className="p-3 border rounded-lg">
+                    <Typography variant="body-2">
+                      Este checkbox usa um div como elemento base
+                    </Typography>
+                  </Checkbox>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { Field } from "@base-ui-components/react/field";
 import { forwardRef, useState } from "react";
+import { Icon } from "../Icon";
 
 export interface PasswordFieldProps {
   name: string;
@@ -68,10 +69,10 @@ export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
             <button
               type="button"
               onClick={togglePasswordVisibility}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-primary"
+              className="surface interactive ghost absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md"
               disabled={disabled}
             >
-              {showPassword ? "🔒" : "👁️"}
+              <Icon icon={showPassword ? "EyeOff" : "Eye"} size="sm" />
             </button>
           )}
         </div>

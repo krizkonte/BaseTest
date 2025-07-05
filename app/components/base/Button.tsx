@@ -64,8 +64,8 @@ export interface ButtonProps extends VariantProps<typeof buttonVariants> {
   loading?: boolean;
   fullWidth?: boolean;
   disabled?: boolean;
-  /** Ícone do Lucide React (apenas à esquerda do texto) */
-  icon?: LucideIcon;
+  /** Nome do ícone ou componente Lucide React (apenas à esquerda do texto) */
+  icon?: string | LucideIcon;
   /** Apenas ícone (sem texto) */
   iconOnly?: boolean;
   [key: string]: any;
@@ -78,7 +78,7 @@ type BaseButtonProps = ButtonProps &
 /**
  * Componente Button aprimorado com:
  * - CVA expandido para estados booleanos (disabled, loading, fullWidth, iconOnly)
- * - Suporte a ícones Lucide React via componente Icon
+ * - Suporte a ícones por nome (string) ou componente Lucide React via componente Icon
  * - Acessibilidade simplificada com atributos ARIA automáticos
  * - Suporte a elementos customizados (as prop) com acessibilidade
  * - DX melhorada com menos boilerplate

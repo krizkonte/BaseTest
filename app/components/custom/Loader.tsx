@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+
 import { mergeProps } from "@base-ui-components/react/merge-props";
 
 const loaderVariants = cva("animate-spin", {

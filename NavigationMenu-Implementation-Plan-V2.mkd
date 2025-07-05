@@ -1,0 +1,327 @@
+# Plano de Implementação V2: NavigationMenu Component
+
+## 📋 Visão Geral
+
+Este documento detalha a implementação de um componente `NavigationMenu` para o Design System do projeto. Esta versão (V2) refina o plano original, incorporando as melhores práticas de desenvolvimento React (incluindo React 19), alinhando-se estritamente aos padrões de componentes já existentes no projeto (`Button`, `Field`, etc.) e simplificando a implementação para focar na manutenibilidade e na experiência do desenvolvedor (DX).
+
+O plano adota uma abordagem de **wrapper consistente**, onde os componentes do Base UI são encapsulados para fornecer uma API de alto nível, previsível e estilizada através de props, em vez de exigir que o desenvolvedor final manipule classes CSS diretamente.
+
+## 🎯 Objetivos
+
+- **Consistência Arquitetural:** Garantir que o `NavigationMenu` siga exatamente os mesmos padrões de arquitetura (CVA, props de variantes, composição) dos outros componentes do Design System.
+- **Excelente DX:** Oferecer uma API simples e declarativa. O desenvolvedor deve usar props como `variant="ghost"` em vez de `className="nav-menu__trigger nav-menu__trigger--ghost"`.
+- **Manutenibilidade:** Criar componentes fáceis de entender, manter e estender, encapsulando a complexidade e evitando a duplicação de código.
+- **Flexibilidade:** Manter "válvulas de escape" (`as`, `render` prop) para casos de uso avançados, sem comprometer a simplicidade da API principal.
+- **Aproveitamento do Base UI:** Usar o Base UI para toda a lógica de comportamento e acessibilidade (a11y), focando nosso trabalho apenas na camada de apresentação e integração com o DS.
+
+## 📁 Estrutura de Arquivos
+
+A estrutura seguirá o padrão dos componentes de base existentes, localizando-se em `app/components/base/`.
+
+```
+app/components/base/
+├── navigation-menu/
+│   ├── NavigationMenu.tsx          # Wrapper para Root e List. Define o contexto do menu.
+│   ├── NavigationMenuItem.tsx        # Wrapper para Item.
+│   ├── NavigationMenuTrigger.tsx   # O botão que abre o submenu. Contém as variantes de estilo.
+│   ├── NavigationMenuContent.tsx   # O container do submenu que aparece.
+│   ├── NavigationMenuLink.tsx      # Um link estilizado para ser usado dentro do Content.
+│   └── index.tsx                   # Re-exporta todos os componentes para fácil importação.
+└── NavigationMenu.tsx              # Arquivo na raiz de /base para re-exportar o diretório.
+```
+
+**Justificativa:** Colocar os componentes em um diretório dedicado (`navigation-menu/`) melhora a organização, e o re-export em `base/NavigationMenu.tsx` mantém o padrão de importação (`@/components/base/NavigationMenu`).
+
+## 🏗️ Implementação dos Componentes (API e Código)
+
+A seguir, o esqueleto de cada componente, simplificado para clareza e alinhamento.
+
+**Nota sobre React 19:** Com React 19, o uso de `React.forwardRef` se torna obsoleto, pois a `ref` pode ser passada diretamente para um componente de função. O código abaixo mantém `forwardRef` para compatibilidade, mas está pronto para a simplificação.
+
+---
+
+### 1. `navigation-menu/NavigationMenu.tsx`
+
+Este componente combina `Root` e `List` do Base UI para simplicidade. Ele atua como o container principal.
+
+```typescript
+import * as React from "react";
+import {
+  NavigationMenu as BaseNavigationMenu,
+  NavigationMenuList,
+} from "@base-ui-components/react/navigation-menu";
+import { cn } from "@/lib/utils"; // Supondo uma função de utilitário para classes
+
+export interface NavigationMenuProps extends React.ComponentProps<typeof BaseNavigationMenu.Root> {
+  className?: string;
+  listClassName?: string;
+}
+
+const NavigationMenu = React.forwardRef<
+  React.ElementRef<typeof BaseNavigationMenu.Root>,
+  NavigationMenuProps
+>(({ className, listClassName, children, ...props }, ref) => (
+  <BaseNavigationMenu.Root
+    ref={ref}
+    className={cn("relative", className)}
+    {...props}
+  >
+    <NavigationMenuList className={cn("flex flex-row items-center gap-2", listClassName)}>
+      {children}
+    </NavigationMenuList>
+  </BaseNavigationMenu.Root>
+));
+NavigationMenu.displayName = "NavigationMenu";
+
+export { NavigationMenu };
+```
+**Responsabilidades:**
+- Iniciar o contexto do menu.
+- Conter a lista de itens.
+- Não possui variantes próprias, pois é apenas um container estrutural.
+
+---
+
+### 2. `navigation-menu/NavigationMenuItem.tsx`
+
+Um wrapper simples para o `NavigationMenuItem` do Base UI.
+
+```typescript
+import { NavigationMenuItem as BaseNavigationMenuItem } from "@base-ui-components/react/navigation-menu";
+
+// Re-export direto, pois geralmente não precisa de estilização ou lógica adicional.
+// Poderíamos adicionar um wrapper se necessário no futuro.
+export const NavigationMenuItem = BaseNavigationMenuItem;
+```
+
+---
+
+### 3. `navigation-menu/NavigationMenuTrigger.tsx`
+
+Este é o componente principal para interação, análogo ao `Button`. Ele conterá as variantes de estilo.
+
+```typescript
+import * as React from "react";
+import { NavigationMenu as BaseNavigationMenu } from "@base-ui-components/react/navigation-menu";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+import { Icon } from "@/components/custom/Icon"; // Usando o Icon component existente
+
+const triggerVariants = cva(
+  "foundation-button interactive font-medium rounded-md flex items-center gap-x-2",
+  {
+    variants: {
+      variant: {
+        default: "surface brand",
+        outline: "ghost border-surface border-thin",
+        ghost: "ghost",
+      },
+      size: {
+        sm: "h-6 px-2 text-sm",
+        md: "h-8 px-3 text-base",
+        lg: "h-10 px-4 text-lg",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "md",
+    },
+  }
+);
+
+export interface NavigationMenuTriggerProps
+  extends React.ComponentProps<typeof BaseNavigationMenu.Trigger>,
+    VariantProps<typeof triggerVariants> {}
+
+const NavigationMenuTrigger = React.forwardRef<
+  React.ElementRef<typeof BaseNavigationMenu.Trigger>,
+  NavigationMenuTriggerProps
+>(({ className, variant, size, children, ...props }, ref) => (
+  <BaseNavigationMenu.Trigger
+    ref={ref}
+    className={cn(triggerVariants({ variant, size, className }))}
+    {...props}
+  >
+    {children}
+    <BaseNavigationMenu.Icon className="relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180" aria-hidden="true" />
+  </BaseNavigationMenu.Trigger>
+));
+NavigationMenuTrigger.displayName = "NavigationMenuTrigger";
+
+export { NavigationMenuTrigger };
+```
+**Responsabilidades:**
+- Aplicar os estilos (`variant`, `size`) consistentes com o `Button`.
+- Renderizar o ícone de "dropdown" (chevron) automaticamente.
+- Lidar com todos os estados de interação e a11y via Base UI.
+
+---
+
+### 4. `navigation-menu/NavigationMenuContent.tsx`
+
+O container do submenu.
+
+```typescript
+import * as React from "react";
+import { NavigationMenu as BaseNavigationMenu } from "@base-ui-components/react/navigation-menu";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const contentVariants = cva(
+  "surface high border-surface border-thin rounded-lg shadow-2xl p-2",
+  {
+    variants: {
+      size: {
+        sm: "w-48",
+        md: "w-60",
+        lg: "w-80",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+export interface NavigationMenuContentProps
+  extends React.ComponentProps<typeof BaseNavigationMenu.Content>,
+    VariantProps<typeof contentVariants> {}
+
+const NavigationMenuContent = React.forwardRef<
+  React.ElementRef<typeof BaseNavigationMenu.Content>,
+  NavigationMenuContentProps
+>(({ className, size, children, ...props }, ref) => (
+  <BaseNavigationMenu.Content
+    ref={ref}
+    className={cn(
+      "origin-top-center absolute top-0 left-0 flex h-[var(--radix-navigation-menu-viewport-height)] w-full justify-center",
+      contentVariants({ size, className })
+    )}
+    {...props}
+  >
+    <div className="flex flex-col gap-1 p-2">{children}</div>
+  </BaseNavigationMenu.Content>
+));
+NavigationMenuContent.displayName = "NavigationMenuContent";
+
+export { NavigationMenuContent };
+```
+
+---
+
+### 5. `navigation-menu/NavigationMenuLink.tsx`
+
+Um componente de conveniência para criar links padronizados dentro do `Content`.
+
+```typescript
+import * as React from "react";
+import { NavigationMenu as BaseNavigationMenu } from "@base-ui-components/react/navigation-menu";
+import { cn } from "@/lib/utils";
+
+export interface NavigationMenuLinkProps extends React.ComponentProps<typeof BaseNavigationMenu.Link> {}
+
+const NavigationMenuLink = React.forwardRef<
+  React.ElementRef<typeof BaseNavigationMenu.Link>,
+  NavigationMenuLinkProps
+>(({ className, children, ...props }, ref) => {
+  return (
+    <BaseNavigationMenu.Link
+      ref={ref}
+      className={cn(
+        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:surface-hover focus:surface-hover",
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </BaseNavigationMenu.Link>
+  );
+});
+NavigationMenuLink.displayName = "NavigationMenuLink";
+
+// Componente de conveniência para o layout comum de Título + Descrição
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...props}
+        >
+          <div className="typo title-2 font-semibold">{title}</div>
+          <p className="line-clamp-2 typo caption-1 text-tertiary">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
+
+
+export { NavigationMenuLink, ListItem };
+```
+
+## 📝 Exemplo de Uso
+
+O uso final será declarativo e consistente com os outros componentes do DS.
+
+```tsx
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  ListItem, // Usando o novo ListItem para conveniência
+} from "@/components/base/NavigationMenu";
+import { Link } from "react-router-dom";
+
+function MyComponent() {
+  return (
+    <NavigationMenu>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger variant="outline">Componentes</NavigationMenuTrigger>
+        <NavigationMenuContent>
+          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ListItem href="/docs/primitives/button" title="Button">
+              Para ações e interações do usuário.
+            </ListItem>
+            <ListItem href="/docs/primitives/card" title="Card">
+              Superfícies para exibir conteúdo e ações.
+            </ListItem>
+            <ListItem href="/docs/primitives/field" title="Field">
+              Para entrada de dados em formulários.
+            </ListItem>
+          </ul>
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+
+      <NavigationMenuItem>
+        {/* Pode ser usado com `Link` do react-router */}
+        <NavigationMenuLink asChild>
+          <Link to="/docs" className={/* use triggerVariants aqui se quiser */}>
+            Documentação
+          </Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    </NavigationMenu>
+  );
+}
+```
+
+## 🎯 Conclusão da Abordagem
+
+Esta abordagem V2 é a síntese ideal para o seu projeto porque:
+
+1.  **Respeita a Arquitetura Existente:** Mantém 100% de consistência com os componentes já criados.
+2.  **Simplifica a Implementação:** Remove a complexidade desnecessária de `useRender` e `mergeProps`, focando no que o DS precisa fazer: aplicar estilos e fornecer uma API limpa.
+3.  **Maximiza a DX:** Os desenvolvedores usarão uma API que já conhecem, acelerando o desenvolvimento e reduzindo a curva de aprendizado.
+4.  **É Robusta e Flexível:** Construída sobre a base sólida de acessibilidade e comportamento do Base UI, com a flexibilidade necessária para o futuro.
