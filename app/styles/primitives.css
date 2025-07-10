@@ -1,6 +1,6 @@
 @theme inline {
-  --white: 1 0 0;
-  --black: 0 0 0;
+  --white: oklch(1 0 0);
+  --black: oklch(0 0 0);
 
   /* Transparência */
   --opacity-100: 1;

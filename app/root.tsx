@@ -1,11 +1,7 @@
-import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import React from "react";
+import { ThemeController } from "./components/ThemeController";
+import { PaletteCustomizer, VARS } from "./components/PaletteCustomizer";
+import { Outlet, Scripts, Links, Meta, ScrollRestoration } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -32,10 +28,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      
+
       <body>
         <div className="root">
-        {children}
+          <ThemeController />
+          {children}
         </div>
         <ScrollRestoration />
         <Scripts />
@@ -44,8 +41,41 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
-  return <Outlet />;
+export default function AppRoot() {
+  const [brand, setBrand] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    function syncBrand() {
+      setBrand(localStorage.getItem("brand"));
+    }
+    syncBrand();
+    window.addEventListener("storage", syncBrand);
+    window.addEventListener("brandChange", syncBrand);
+    return () => {
+      window.removeEventListener("storage", syncBrand);
+      window.removeEventListener("brandChange", syncBrand);
+    };
+  }, []);
+
+  // Limpa variáveis customizadas ao sair da brand custom
+  React.useEffect(() => {
+    const root = document.documentElement;
+    if (brand !== "custom") {
+      Object.values(VARS).forEach((varsArr) => {
+        varsArr.forEach((cssVar) => {
+          root.style.removeProperty(cssVar);
+        });
+      });
+    }
+  }, [brand]);
+
+  return (
+    <>
+      <ThemeController />
+      {brand === "custom" && <PaletteCustomizer />}
+      <Outlet />
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -53,13 +83,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let details = "An unexpected error occurred.";
   let stack: string | undefined;
 
-  if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
+  if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
   }

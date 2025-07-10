@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap");
 @import "tailwindcss";
 @import "./styles/primitives.css";
-@import "./styles/utilities-surface.css";
+@import "./styles/utilities-surface2.css";
 @import "./styles/utilities-typography.css";
-@import "./styles/component.css";
 @import "./styles/utilities-border.css";
 @import "./styles/data-brand.css";
+@import "./styles/component.css";
 
 :root {
   color-scheme: light dark;
-  --bg-app: light-dark(oklch(var(--neutral-200)), oklch(var(--neutral-950)));
+  --app-bg: light-dark(var(--neutral-200), var(--neutral-950));
 }
 
 html,
 body {
-  background-color: var(--bg-app);
+  background-color: var(--app-bg);
 }
 
 html.light {

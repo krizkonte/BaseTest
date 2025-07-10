@@ -1,12 +1,12 @@
 // Re-exports dos campos essenciais
-export { TextField } from "../custom/field/TextField";
-export type { TextFieldProps } from "../custom/field/TextField";
+export { TextField } from "./fields/TextField";
+export type { TextFieldProps } from "./fields/TextField";
 
-export { TextareaField } from "../custom/field/TextareaField";
-export type { TextareaFieldProps } from "../custom/field/TextareaField";
+export { TextareaField } from "./fields/TextareaField";
+export type { TextareaFieldProps } from "./fields/TextareaField";
 
-export { EmailField } from "../custom/field/EmailField";
-export type { EmailFieldProps } from "../custom/field/EmailField";
+export { EmailField } from "./fields/EmailField";
+export type { EmailFieldProps } from "./fields/EmailField";
 
-export { PasswordField } from "../custom/field/PasswordField";
-export type { PasswordFieldProps } from "../custom/field/PasswordField";
+export { PasswordField } from "./fields/PasswordField";
+export type { PasswordFieldProps } from "./fields/PasswordField";

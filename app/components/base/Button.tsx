@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Loader } from "../custom/Loader";
-import { Icon } from "../custom/Icon";
+import { Loader } from "./Loader";
+import { Icon } from "./Icon";
 import { useForceActive } from "../../lib/useForceActive";
 import { useRender } from "@base-ui-components/react/use-render";
 import { mergeProps } from "@base-ui-components/react/merge-props";
@@ -25,8 +25,8 @@ import type { LucideIcon } from "lucide-react";
 const buttonVariants = cva("foundation-button interactive font-semibold", {
   variants: {
     variant: {
-      default: "surface brand",
-      outline: "ghost border-surface border-thin",
+      default: "surface-brand",
+      outline: "ghost border border-surface",
       ghost: "ghost",
       danger: "surface danger",
       ghostDanger: "ghost danger",
@@ -83,7 +83,7 @@ type BaseButtonProps = ButtonProps &
  * - Suporte a elementos customizados (as prop) com acessibilidade
  * - DX melhorada com menos boilerplate
  */
-const BaseButton = React.memo(
+const Button = React.memo(
   React.forwardRef<HTMLButtonElement, BaseButtonProps>(
     (
       {
@@ -221,6 +221,6 @@ const BaseButton = React.memo(
     }
   )
 );
-BaseButton.displayName = "BaseButton";
+Button.displayName = "Button";
 
-export default BaseButton;
+export default Button;

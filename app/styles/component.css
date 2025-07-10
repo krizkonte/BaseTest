@@ -2,6 +2,16 @@
   .foundation-button {
     @apply flex items-center justify-center gap-0.5 whitespace-nowrap select-none;
   }
-
-
+  /* Password Reset */
+  input[type="password"]::-webkit-input-password-toggle-button {
+    display: none;
+  }
+  input[type="password"]::-ms-reveal {
+    display: none;
+  }
+  input[type="password"]::-webkit-credentials-auto-fill-button,
+  input[type="password"]::-webkit-input-decoration,
+  input[type="password"]::-webkit-input-clear-button {
+    display: none;
+  }
 }

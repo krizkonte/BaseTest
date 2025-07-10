@@ -40,10 +40,6 @@ export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
   ) => {
     const [showPassword, setShowPassword] = useState(false);
 
-    const togglePasswordVisibility = () => {
-      setShowPassword(!showPassword);
-    };
-
     return (
       <Field.Root className="flex w-full flex-col items-start gap-1">
         {label && (
@@ -68,9 +64,11 @@ export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
           {showToggle && (
             <button
               type="button"
-              onClick={togglePasswordVisibility}
+              onClick={() => setShowPassword((v) => !v)}
               className="surface interactive ghost absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md"
               disabled={disabled}
+              tabIndex={-1}
+              aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}
             >
               <Icon icon={showPassword ? "EyeOff" : "Eye"} size="sm" />
             </button>
