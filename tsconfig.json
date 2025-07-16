@@ -3,7 +3,10 @@
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",
-    ".react-router/types/**/*"
+    ".react-router/types/**/*",
+    ".backup/PaletteCustomizer copy 2.tsx",
+    ".backup/PaletteCustomizer copy 3.tsx",
+    ".backup/PaletteCustomizer copy.tsx"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],

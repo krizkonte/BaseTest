@@ -57,7 +57,7 @@ export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
             placeholder={placeholder}
             defaultValue={defaultValue}
             onChange={(e) => onChange?.(e.target.value)}
-            className="h-10 w-full rounded-md pl-3.5 pr-10 border-thin border-surface"
+            className="h-10 w-full pl-3.5 pr-10 border-thin border-surface input-rounded"
             ref={ref}
             {...props}
           />
@@ -65,7 +65,7 @@ export const PasswordField = forwardRef<HTMLInputElement, PasswordFieldProps>(
             <button
               type="button"
               onClick={() => setShowPassword((v) => !v)}
-              className="surface interactive ghost absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md"
+              className="interactive-ghost absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md"
               disabled={disabled}
               tabIndex={-1}
               aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}

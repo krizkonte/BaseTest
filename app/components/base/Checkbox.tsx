@@ -30,7 +30,7 @@ const Checkbox = React.forwardRef<HTMLButtonElement, CheckboxProps>(
         <>
           <BaseCheckbox.Root
             disabled={disabled}
-            className="ghost interactive border-surface border-thin flex size-4 items-center justify-center rounded-sm"
+            className="interactive-ghost border-surface border-thin flex size-4 items-center justify-center input-rounded-sm"
             {...props}
           >
             <BaseCheckbox.Indicator className="flex data-[unchecked]:hidden">

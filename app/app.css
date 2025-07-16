@@ -6,15 +6,16 @@
 @import "./styles/utilities-border.css";
 @import "./styles/data-brand.css";
 @import "./styles/component.css";
+@import "./styles/surface-test.css";
 
 :root {
   color-scheme: light dark;
-  --app-bg: light-dark(var(--neutral-200), var(--neutral-950));
 }
 
 html,
 body {
   background-color: var(--app-bg);
+  color: var(--app-text);
 }
 
 html.light {

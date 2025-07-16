@@ -83,7 +83,7 @@ export const EmailField = forwardRef<HTMLInputElement, EmailFieldProps>(
           defaultValue={defaultValue}
           onChange={(e) => handleChange(e.target.value)}
           onBlur={handleBlur}
-          className="h-10 w-full rounded-md pl-3.5 border-thin border-surface"
+          className="h-10 w-full pl-3.5 border-thin border-surface input-rounded"
           ref={ref}
           {...props}
         />

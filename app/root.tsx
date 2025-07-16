@@ -61,11 +61,32 @@ export default function AppRoot() {
   React.useEffect(() => {
     const root = document.documentElement;
     if (brand !== "custom") {
+      // Remove variáveis de cores
       Object.values(VARS).forEach((varsArr) => {
         varsArr.forEach((cssVar) => {
           root.style.removeProperty(cssVar);
         });
       });
+
+      // Remove variáveis de bordas
+      const ROUNDED_VARS = [
+        "--box-rounded",
+        "--card-rounded",
+        "--input-rounded",
+        "--button-rounded",
+      ];
+      ROUNDED_VARS.forEach((cssVar) => {
+        root.style.removeProperty(cssVar);
+      });
+
+      // Remove variáveis de fonte
+      const FONT_VARS = ["--font-sans", "--font-monos"];
+      FONT_VARS.forEach((cssVar) => {
+        root.style.removeProperty(cssVar);
+      });
+
+      // Remove variáveis derivadas
+      root.style.removeProperty("--input-rounded-sm");
     }
   }, [brand]);
 

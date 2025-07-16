@@ -1,0 +1,3048 @@
+{
+  "id": "VariableCollectionId:3:3",
+  "name": "Colors",
+  "modes": {
+    "3:1": "light",
+    "3:2": "dark"
+  },
+  "variableIds": [
+    "VariableID:3:4",
+    "VariableID:3:5",
+    "VariableID:3:6",
+    "VariableID:3:7",
+    "VariableID:3:8",
+    "VariableID:3:9",
+    "VariableID:3:10",
+    "VariableID:3:11",
+    "VariableID:3:12",
+    "VariableID:3:13",
+    "VariableID:3:14",
+    "VariableID:3:15",
+    "VariableID:3:16",
+    "VariableID:3:17",
+    "VariableID:3:18",
+    "VariableID:3:19",
+    "VariableID:3:20",
+    "VariableID:3:21",
+    "VariableID:3:22",
+    "VariableID:3:23",
+    "VariableID:3:24",
+    "VariableID:3:25",
+    "VariableID:3:26",
+    "VariableID:3:27",
+    "VariableID:3:28",
+    "VariableID:3:29",
+    "VariableID:3:30",
+    "VariableID:3:31",
+    "VariableID:3:32",
+    "VariableID:3:33",
+    "VariableID:3:34",
+    "VariableID:3:35",
+    "VariableID:3:36",
+    "VariableID:3:37",
+    "VariableID:3:38",
+    "VariableID:3:39",
+    "VariableID:3:40",
+    "VariableID:3:41",
+    "VariableID:3:42",
+    "VariableID:3:43",
+    "VariableID:3:44",
+    "VariableID:3:45",
+    "VariableID:3:46",
+    "VariableID:3:47",
+    "VariableID:3:48",
+    "VariableID:3:49",
+    "VariableID:3:50",
+    "VariableID:3:51",
+    "VariableID:3:52",
+    "VariableID:3:53",
+    "VariableID:3:54",
+    "VariableID:3:55",
+    "VariableID:3:56",
+    "VariableID:3:57",
+    "VariableID:3:58",
+    "VariableID:3:59",
+    "VariableID:3:60",
+    "VariableID:3:61",
+    "VariableID:3:62",
+    "VariableID:3:63",
+    "VariableID:3:64",
+    "VariableID:3:65",
+    "VariableID:3:66",
+    "VariableID:3:67",
+    "VariableID:3:68",
+    "VariableID:3:69"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:3:4",
+      "name": "core/neutral-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9696334456412817,
+          "g": 0.9567447985901921,
+          "b": 0.9625271679587001,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9696334456412817,
+          "g": 0.9567447985901921,
+          "b": 0.9625271679587001,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9696334456412817,
+            "g": 0.9567447985901921,
+            "b": 0.9625271679587001,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9696334456412817,
+            "g": 0.9567447985901921,
+            "b": 0.9625271679587001,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:5",
+      "name": "core/neutral-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9457134372105561,
+          "g": 0.9296975352385134,
+          "b": 0.9368919829263973,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9457134372105561,
+          "g": 0.9296975352385134,
+          "b": 0.9368919829263973,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9457134372105561,
+            "g": 0.9296975352385134,
+            "b": 0.9368919829263973,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9457134372105561,
+            "g": 0.9296975352385134,
+            "b": 0.9368919829263973,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:6",
+      "name": "core/neutral-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9177132711011129,
+          "g": 0.8860437631628574,
+          "b": 0.9003574741814957,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.8277250085997885,
+          "g": 0.7966920965032075,
+          "b": 0.8107316905542312,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9177132711011129,
+            "g": 0.8860437631628574,
+            "b": 0.9003574741814957,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.8277250085997885,
+            "g": 0.7966920965032075,
+            "b": 0.8107316905542312,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:7",
+      "name": "core/neutral-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8511226606142959,
+          "g": 0.8045872132422442,
+          "b": 0.8257688473417527,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.6735652500962915,
+          "g": 0.6320650250654214,
+          "b": 0.6509948960874633,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8511226606142959,
+            "g": 0.8045872132422442,
+            "b": 0.8257688473417527,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.6735652500962915,
+            "g": 0.6320650250654214,
+            "b": 0.6509948960874633,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:8",
+      "name": "core/neutral-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.7560317338335207,
+          "g": 0.7017021151324879,
+          "b": 0.7265787519799578,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5807341041481011,
+          "g": 0.5348178775614556,
+          "b": 0.5558843469136423,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.7560317338335207,
+            "g": 0.7017021151324879,
+            "b": 0.7265787519799578,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5807341041481011,
+            "g": 0.5348178775614556,
+            "b": 0.5558843469136423,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:9",
+      "name": "core/neutral-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.5922097655995762,
+          "g": 0.529371445953179,
+          "b": 0.5584804177656996,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.4480612696279415,
+          "g": 0.39393030626548725,
+          "b": 0.4191091286078089,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.5922097655995762,
+            "g": 0.529371445953179,
+            "b": 0.5584804177656996,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.4480612696279415,
+            "g": 0.39393030626548725,
+            "b": 0.4191091286078089,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:10",
+      "name": "core/neutral-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.4666140319804322,
+          "g": 0.40154805190051435,
+          "b": 0.4320189281516578,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.2737896090892597,
+          "g": 0.253594495244505,
+          "b": 0.26282190173080733,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.4666140319804322,
+            "g": 0.40154805190051435,
+            "b": 0.4320189281516578,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.2737896090892597,
+            "g": 0.253594495244505,
+            "b": 0.26282190173080733,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:11",
+      "name": "core/neutral-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.3491962658211326,
+          "g": 0.2952461290335144,
+          "b": 0.32059951751295107,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.17276806384182422,
+          "g": 0.15413076009773652,
+          "b": 0.16271323842049806,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.3491962658211326,
+            "g": 0.2952461290335144,
+            "b": 0.32059951751295107,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.17276806384182422,
+            "g": 0.15413076009773652,
+            "b": 0.16271323842049806,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:12",
+      "name": "core/neutral-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.2636069151852859,
+          "g": 0.21259400050515853,
+          "b": 0.23682607161408564,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.11598550454555007,
+          "g": 0.0985055957031662,
+          "b": 0.10661919737918057,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.2636069151852859,
+            "g": 0.21259400050515853,
+            "b": 0.23682607161408564,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.11598550454555007,
+            "g": 0.0985055957031662,
+            "b": 0.10661919737918057,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:13",
+      "name": "core/neutral-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.16257457734291422,
+          "g": 0.11606022075196984,
+          "b": 0.13865202668562945,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.08270567153066183,
+          "g": 0.062098464038506086,
+          "b": 0.07184580348316835,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.16257457734291422,
+            "g": 0.11606022075196984,
+            "b": 0.13865202668562945,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.08270567153066183,
+            "g": 0.062098464038506086,
+            "b": 0.07184580348316835,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:14",
+      "name": "core/neutral-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.0567251237216515,
+          "g": 0.03714462487671208,
+          "b": 0.04649107018551673,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.05415374926992091,
+          "g": 0.026945286615820383,
+          "b": 0.03974034346843993,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.0567251237216515,
+            "g": 0.03714462487671208,
+            "b": 0.04649107018551673,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.05415374926992091,
+            "g": 0.026945286615820383,
+            "b": 0.03974034346843993,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:15",
+      "name": "core/brand-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9610233717096758,
+          "g": 0.9443574356812127,
+          "b": 0.9602480295619723,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9530197645963149,
+          "g": 0.9245734261637183,
+          "b": 0.9517416512433959,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9610233717096758,
+            "g": 0.9443574356812127,
+            "b": 0.9602480295619723,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9530197645963149,
+            "g": 0.9245734261637183,
+            "b": 0.9517416512433959,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:16",
+      "name": "core/brand-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9465055996928672,
+          "g": 0.8877253048716954,
+          "b": 0.9441064181451159,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9408518378524902,
+          "g": 0.8705770180369496,
+          "b": 0.9380963552809133,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9465055996928672,
+            "g": 0.8877253048716954,
+            "b": 0.9441064181451159,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9408518378524902,
+            "g": 0.8705770180369496,
+            "b": 0.9380963552809133,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:17",
+      "name": "core/brand-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9184395328736008,
+          "g": 0.7804825654490579,
+          "b": 0.9143564543282794,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.89790647445524,
+          "g": 0.7516792830921498,
+          "b": 0.89380934239567,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9184395328736008,
+            "g": 0.7804825654490579,
+            "b": 0.9143564543282794,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.89790647445524,
+            "g": 0.7516792830921498,
+            "b": 0.89380934239567,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:18",
+      "name": "core/brand-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8731651982367835,
+          "g": 0.6268182290310322,
+          "b": 0.8698947697303209,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.8398330898781545,
+          "g": 0.5736575772239292,
+          "b": 0.8373773589889868,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8731651982367835,
+            "g": 0.6268182290310322,
+            "b": 0.8698947697303209,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.8398330898781545,
+            "g": 0.5736575772239292,
+            "b": 0.8373773589889868,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:19",
+      "name": "core/brand-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.7771182330871159,
+          "g": 0.37988115301289294,
+          "b": 0.7813944491989425,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7783765942063483,
+          "g": 0.27489473705174255,
+          "b": 0.7887380883399182,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.7771182330871159,
+            "g": 0.37988115301289294,
+            "b": 0.7813944491989425,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7783765942063483,
+            "g": 0.27489473705174255,
+            "b": 0.7887380883399182,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:20",
+      "name": "core/brand-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.6980992550059034,
+          "g": 0.13266098201701543,
+          "b": 0.7129207384742687,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7045475523307803,
+          "g": 0.10455966292114335,
+          "b": 0.7205608495954224,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.6980992550059034,
+            "g": 0.13266098201701543,
+            "b": 0.7129207384742687,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7045475523307803,
+            "g": 0.10455966292114335,
+            "b": 0.7205608495954224,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:21",
+      "name": "core/brand-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.6311636199198984,
+          "g": -0.16459982998067574,
+          "b": 0.6542882108331985,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.6462606649698787,
+          "g": -0.20262451511037882,
+          "b": 0.6730454911359675,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.6311636199198984,
+            "g": -0.16459982998067574,
+            "b": 0.6542882108331985,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.6462606649698787,
+            "g": -0.20262451511037882,
+            "b": 0.6730454911359675,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:22",
+      "name": "core/brand-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.5564211595427835,
+          "g": -0.14362992746260642,
+          "b": 0.577271721585169,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5504590124555657,
+          "g": -0.18893812977323743,
+          "b": 0.5762098788989956,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.5564211595427835,
+            "g": -0.14362992746260642,
+            "b": 0.577271721585169,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5504590124555657,
+            "g": -0.18893812977323743,
+            "b": 0.5762098788989956,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:23",
+      "name": "core/brand-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.4449574113476719,
+          "g": -0.07971553802926362,
+          "b": 0.4600381709926225,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.35293660122368464,
+          "g": -0.12496345265279529,
+          "b": 0.372671671548144,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.4449574113476719,
+            "g": -0.07971553802926362,
+            "b": 0.4600381709926225,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.35293660122368464,
+            "g": -0.12496345265279529,
+            "b": 0.372671671548144,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:24",
+      "name": "core/brand-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.31968695095919814,
+          "g": 0.010568872529180423,
+          "b": 0.32822364613110705,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.2077325963623174,
+          "g": -0.08080275336491669,
+          "b": 0.2248059197890412,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.31968695095919814,
+            "g": 0.010568872529180423,
+            "b": 0.32822364613110705,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.2077325963623174,
+            "g": -0.08080275336491669,
+            "b": 0.2248059197890412,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:25",
+      "name": "core/brand-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.22156422967162803,
+          "g": 0.030650593740703235,
+          "b": 0.2262999565093472,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.12837517311446234,
+          "g": -0.03977598848987244,
+          "b": 0.14029156142091054,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.22156422967162803,
+            "g": 0.030650593740703235,
+            "b": 0.2262999565093472,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.12837517311446234,
+            "g": -0.03977598848987244,
+            "b": 0.14029156142091054,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:26",
+      "name": "core/danger-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9947096752955457,
+          "g": 0.9322526464717066,
+          "b": 0.9482419113389716,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9884931977782617,
+          "g": 0.9126118816986771,
+          "b": 0.9321820230730354,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9947096752955457,
+            "g": 0.9322526464717066,
+            "b": 0.9482419113389716,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9884931977782617,
+            "g": 0.9126118816986771,
+            "b": 0.9321820230730354,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:27",
+      "name": "core/danger-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9901961470671571,
+          "g": 0.8744708763707175,
+          "b": 0.9049771567433942,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.972928003502571,
+          "g": 0.8446549584112658,
+          "b": 0.8787520323591124,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9901961470671571,
+            "g": 0.8744708763707175,
+            "b": 0.9049771567433942,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.972928003502571,
+            "g": 0.8446549584112658,
+            "b": 0.8787520323591124,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:28",
+      "name": "core/danger-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.978693759919841,
+          "g": 0.7650160459383367,
+          "b": 0.8248009905503453,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9593769787632743,
+          "g": 0.7162760757570427,
+          "b": 0.7858025223486913,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.978693759919841,
+            "g": 0.7650160459383367,
+            "b": 0.8248009905503453,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9593769787632743,
+            "g": 0.7162760757570427,
+            "b": 0.7858025223486913,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:29",
+      "name": "core/danger-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.962280085547604,
+          "g": 0.6006216903497096,
+          "b": 0.7130813271003821,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9414700406322224,
+          "g": 0.5381819549105924,
+          "b": 0.6685301799537502,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.962280085547604,
+            "g": 0.6006216903497096,
+            "b": 0.7130813271003821,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9414700406322224,
+            "g": 0.5381819549105924,
+            "b": 0.6685301799537502,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:30",
+      "name": "core/danger-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9200512746726439,
+          "g": 0.36214392423812536,
+          "b": 0.5706216204494167,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9150393725291871,
+          "g": 0.2572089121134273,
+          "b": 0.5290055922967467,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9200512746726439,
+            "g": 0.36214392423812536,
+            "b": 0.5706216204494167,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9150393725291871,
+            "g": 0.2572089121134273,
+            "b": 0.5290055922967467,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:31",
+      "name": "core/danger-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8683539891008039,
+          "g": 0.048898504367529856,
+          "b": 0.4631424608939357,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.8400411947989902,
+          "g": -0.1615485213932348,
+          "b": 0.421850296448604,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8683539891008039,
+            "g": 0.048898504367529856,
+            "b": 0.4631424608939357,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.8400411947989902,
+            "g": -0.1615485213932348,
+            "b": 0.421850296448604,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:32",
+      "name": "core/danger-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.7982187401687547,
+          "g": -0.22001477620612064,
+          "b": 0.3772869736390873,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7741126914304325,
+          "g": -0.2610819696143514,
+          "b": 0.3417478350840093,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.7982187401687547,
+            "g": -0.22001477620612064,
+            "b": 0.3772869736390873,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7741126914304325,
+            "g": -0.2610819696143514,
+            "b": 0.3417478350840093,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:33",
+      "name": "core/danger-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.693773401235389,
+          "g": -0.19566434160431728,
+          "b": 0.3204610303775548,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.6634519556264808,
+          "g": -0.23466397035879255,
+          "b": 0.27946660671480766,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.693773401235389,
+            "g": -0.19566434160431728,
+            "b": 0.3204610303775548,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.6634519556264808,
+            "g": -0.23466397035879255,
+            "b": 0.27946660671480766,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:34",
+      "name": "core/danger-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.42622187404930045,
+          "g": -0.1468388653968688,
+          "b": 0.16389581260672126,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5127731146945078,
+          "g": -0.15000202097781667,
+          "b": 0.22273854579241265,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.42622187404930045,
+            "g": -0.1468388653968688,
+            "b": 0.16389581260672126,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5127731146945078,
+            "g": -0.15000202097781667,
+            "b": 0.22273854579241265,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:35",
+      "name": "core/danger-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.24754248509005133,
+          "g": -0.08094047128238649,
+          "b": 0.07586099544219552,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.36427395694090414,
+          "g": -0.1013760692632861,
+          "b": 0.14751916626719339,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.24754248509005133,
+            "g": -0.08094047128238649,
+            "b": 0.07586099544219552,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.36427395694090414,
+            "g": -0.1013760692632861,
+            "b": 0.14751916626719339,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:36",
+      "name": "core/danger-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.14089267624765256,
+          "g": -0.023992391059905454,
+          "b": 0.037546672707152326,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.2256671730135616,
+          "g": -0.05500957102187073,
+          "b": 0.07757794206901719,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.14089267624765256,
+            "g": -0.023992391059905454,
+            "b": 0.037546672707152326,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.2256671730135616,
+            "g": -0.05500957102187073,
+            "b": 0.07757794206901719,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:37",
+      "name": "core/warning-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 1.0065502037648784,
+          "g": 0.9836986662630481,
+          "b": 0.9080289080605396,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9877918223049164,
+          "g": 0.9614166382368717,
+          "b": 0.8743125731024908,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 1.0065502037648784,
+            "g": 0.9836986662630481,
+            "b": 0.9080289080605396,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9877918223049164,
+            "g": 0.9614166382368717,
+            "b": 0.8743125731024908,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:38",
+      "name": "core/warning-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 1.02925000749554,
+          "g": 0.9642204914895677,
+          "b": 0.7528204905269247,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9938708724311297,
+          "g": 0.9204355548061355,
+          "b": 0.6819760902320104,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 1.02925000749554,
+            "g": 0.9642204914895677,
+            "b": 0.7528204905269247,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9938708724311297,
+            "g": 0.9204355548061355,
+            "b": 0.6819760902320104,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:39",
+      "name": "core/warning-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 1.0436760665125226,
+          "g": 0.929337749580287,
+          "b": 0.5533995191300376,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.982510928903226,
+          "g": 0.8480733557442338,
+          "b": 0.3897519458749678,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 1.0436760665125226,
+            "g": 0.929337749580287,
+            "b": 0.5533995191300376,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.982510928903226,
+            "g": 0.8480733557442338,
+            "b": 0.3897519458749678,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:40",
+      "name": "core/warning-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 1.01376876729353,
+          "g": 0.8573491940489323,
+          "b": 0.29613195492718813,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.9353681020982245,
+          "g": 0.7470195465678896,
+          "b": -0.24507782707151693,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 1.01376876729353,
+            "g": 0.8573491940489323,
+            "b": 0.29613195492718813,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.9353681020982245,
+            "g": 0.7470195465678896,
+            "b": -0.24507782707151693,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:41",
+      "name": "core/warning-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9571193462806556,
+          "g": 0.7740183196083354,
+          "b": -0.19263473588686653,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.8660668057232014,
+          "g": 0.6327043300890174,
+          "b": -0.38404119518310625,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9571193462806556,
+            "g": 0.7740183196083354,
+            "b": -0.19263473588686653,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.8660668057232014,
+            "g": 0.6327043300890174,
+            "b": -0.38404119518310625,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:42",
+      "name": "core/warning-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8790612270430195,
+          "g": 0.6972981613061281,
+          "b": -0.24818869810677086,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7928462905102913,
+          "g": 0.5366118316005608,
+          "b": -0.3918050145292151,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8790612270430195,
+            "g": 0.6972981613061281,
+            "b": -0.24818869810677086,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7928462905102913,
+            "g": 0.5366118316005608,
+            "b": -0.3918050145292151,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:43",
+      "name": "core/warning-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.7225048109035074,
+          "g": 0.5655173195669688,
+          "b": -0.22097406010448956,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.6760427081578848,
+          "g": 0.4456307798605628,
+          "b": -0.3359749276028025,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.7225048109035074,
+            "g": 0.5655173195669688,
+            "b": -0.22097406010448956,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.6760427081578848,
+            "g": 0.4456307798605628,
+            "b": -0.3359749276028025,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:44",
+      "name": "core/warning-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.5608919293216947,
+          "g": 0.4333499011838122,
+          "b": -0.17492905322674399,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5356878280551379,
+          "g": 0.35401878285518634,
+          "b": -0.2583200468910238,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.5608919293216947,
+            "g": 0.4333499011838122,
+            "b": -0.17492905322674399,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5356878280551379,
+            "g": 0.35401878285518634,
+            "b": -0.2583200468910238,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:45",
+      "name": "core/warning-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.4619118310533849,
+          "g": 0.3464249589357649,
+          "b": -0.16200161551567765,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.4203054953438772,
+          "g": 0.2737712998880457,
+          "b": -0.19733249390614976,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.4619118310533849,
+            "g": 0.3464249589357649,
+            "b": -0.16200161551567765,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.4203054953438772,
+            "g": 0.2737712998880457,
+            "b": -0.19733249390614976,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:46",
+      "name": "core/warning-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.37723508560723445,
+          "g": 0.2930025600178513,
+          "b": -0.08585577045532733,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.29953192236216186,
+          "g": 0.18666106759170176,
+          "b": -0.135196664351119,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.37723508560723445,
+            "g": 0.2930025600178513,
+            "b": -0.08585577045532733,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.29953192236216186,
+            "g": 0.18666106759170176,
+            "b": -0.135196664351119,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:47",
+      "name": "core/warning-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.2102710735902678,
+          "g": 0.16002262351551572,
+          "b": -0.02593207666455202,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.1865372991714129,
+          "g": 0.10539891532203091,
+          "b": -0.07637609132112486,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.2102710735902678,
+            "g": 0.16002262351551572,
+            "b": -0.02593207666455202,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.1865372991714129,
+            "g": 0.10539891532203091,
+            "b": -0.07637609132112486,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:48",
+      "name": "core/success-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8997404673662002,
+          "g": 0.966791792709906,
+          "b": 0.9650727623316916,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.8726444654300615,
+          "g": 0.9546954067589316,
+          "b": 0.9526809856121309,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8997404673662002,
+            "g": 0.966791792709906,
+            "b": 0.9650727623316916,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.8726444654300615,
+            "g": 0.9546954067589316,
+            "b": 0.9526809856121309,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:49",
+      "name": "core/success-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.811254140213102,
+          "g": 0.9391881887750416,
+          "b": 0.936454715787595,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7735510852105097,
+          "g": 0.9166127016462989,
+          "b": 0.9137275542155776,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.811254140213102,
+            "g": 0.9391881887750416,
+            "b": 0.936454715787595,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7735510852105097,
+            "g": 0.9166127016462989,
+            "b": 0.9137275542155776,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:50",
+      "name": "core/success-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.6338807298444123,
+          "g": 0.8871121107927818,
+          "b": 0.8838093638659319,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5591025056278877,
+          "g": 0.8562416959397154,
+          "b": 0.8532228224558157,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.6338807298444123,
+            "g": 0.8871121107927818,
+            "b": 0.8838093638659319,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5591025056278877,
+            "g": 0.8562416959397154,
+            "b": 0.8532228224558157,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:51",
+      "name": "core/success-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.2819408798698853,
+          "g": 0.8146972137108188,
+          "b": 0.8143334582078715,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.07215815920437899,
+          "g": 0.7798808654819736,
+          "b": 0.7815056888012569,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.2819408798698853,
+            "g": 0.8146972137108188,
+            "b": 0.8143334582078715,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.07215815920437899,
+            "g": 0.7798808654819736,
+            "b": 0.7815056888012569,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:52",
+      "name": "core/success-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.4369534666650738,
+          "g": 0.712500698056984,
+          "b": 0.7237647128432454,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.4983712956709437,
+          "g": 0.6847609326497572,
+          "b": 0.7030502115205218,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.4369534666650738,
+            "g": 0.712500698056984,
+            "b": 0.7237647128432454,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.4983712956709437,
+            "g": 0.6847609326497572,
+            "b": 0.7030502115205218,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:53",
+      "name": "core/success-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.5149207380351382,
+          "g": 0.624993373557477,
+          "b": 0.6514443622516598,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.5180273071657153,
+          "g": 0.5872949813651689,
+          "b": 0.6204220880137671,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.5149207380351382,
+            "g": 0.624993373557477,
+            "b": 0.6514443622516598,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.5180273071657153,
+            "g": 0.5872949813651689,
+            "b": 0.6204220880137671,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:54",
+      "name": "core/success-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.5043896240985565,
+          "g": 0.5419979510728318,
+          "b": 0.5812489207247732,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.49771456419051324,
+          "g": 0.5084951095494458,
+          "b": 0.5559569373560564,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.5043896240985565,
+            "g": 0.5419979510728318,
+            "b": 0.5812489207247732,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.49771456419051324,
+            "g": 0.5084951095494458,
+            "b": 0.5559569373560564,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:55",
+      "name": "core/success-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.4377595509101054,
+          "g": 0.4661780631149907,
+          "b": 0.5020906848106421,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.42627515164551116,
+          "g": 0.42641210020488063,
+          "b": 0.4716932631576141,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.4377595509101054,
+            "g": 0.4661780631149907,
+            "b": 0.5020906848106421,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.42627515164551116,
+            "g": 0.42641210020488063,
+            "b": 0.4716932631576141,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:56",
+      "name": "core/success-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.34425316507548587,
+          "g": 0.37871142499366156,
+          "b": 0.40476890507857377,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.3215003015493289,
+          "g": 0.33525017208261304,
+          "b": 0.3652216158587854,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.34425316507548587,
+            "g": 0.37871142499366156,
+            "b": 0.40476890507857377,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.3215003015493289,
+            "g": 0.33525017208261304,
+            "b": 0.3652216158587854,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:57",
+      "name": "core/success-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.25600152101507995,
+          "g": 0.3147317183000719,
+          "b": 0.3293394739045605,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.22391885086068702,
+          "g": 0.2313250008300639,
+          "b": 0.25452317943861175,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.25600152101507995,
+            "g": 0.3147317183000719,
+            "b": 0.3293394739045605,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.22391885086068702,
+            "g": 0.2313250008300639,
+            "b": 0.25452317943861175,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:58",
+      "name": "core/success-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.13113951213272068,
+          "g": 0.18366541785808854,
+          "b": 0.19057906987398907,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.1325734389731146,
+          "g": 0.13448607062417778,
+          "b": 0.1513080677791804,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.13113951213272068,
+            "g": 0.18366541785808854,
+            "b": 0.19057906987398907,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.1325734389731146,
+            "g": 0.13448607062417778,
+            "b": 0.1513080677791804,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:59",
+      "name": "core/info-50",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.9028559940822668,
+          "g": 0.962641864520272,
+          "b": 0.9859341861602183,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.876530513593871,
+          "g": 0.9496319754540675,
+          "b": 0.9780445373875483,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.9028559940822668,
+            "g": 0.962641864520272,
+            "b": 0.9859341861602183,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.876530513593871,
+            "g": 0.9496319754540675,
+            "b": 0.9780445373875483,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:60",
+      "name": "core/info-100",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.8176846656508446,
+          "g": 0.9313688941334923,
+          "b": 0.9752070732381398,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.7809162194962248,
+          "g": 0.9079045868001561,
+          "b": 0.9567066057561658,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.8176846656508446,
+            "g": 0.9313688941334923,
+            "b": 0.9752070732381398,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.7809162194962248,
+            "g": 0.9079045868001561,
+            "b": 0.9567066057561658,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:61",
+      "name": "core/info-200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.6492849248709196,
+          "g": 0.8721888652158012,
+          "b": 0.9555550919805867,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.5787905204322895,
+          "g": 0.8390629811512297,
+          "b": 0.934857963654486,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.6492849248709196,
+            "g": 0.8721888652158012,
+            "b": 0.9555550919805867,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.5787905204322895,
+            "g": 0.8390629811512297,
+            "b": 0.934857963654486,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:62",
+      "name": "core/info-300",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": 0.3414449578434829,
+          "g": 0.7880530642903704,
+          "b": 0.9352888164489006,
+          "a": 1
+        },
+        "3:2": {
+          "r": 0.17795379498875494,
+          "g": 0.749658282075132,
+          "b": 0.9157823273413846,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": 0.3414449578434829,
+            "g": 0.7880530642903704,
+            "b": 0.9352888164489006,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": 0.17795379498875494,
+            "g": 0.749658282075132,
+            "b": 0.9157823273413846,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:63",
+      "name": "core/info-400",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.37918542968345237,
+          "g": 0.6687752250962654,
+          "b": 0.9033636688070161,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.4446339392987109,
+          "g": 0.6329344571791128,
+          "b": 0.9061143802295621,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.37918542968345237,
+            "g": 0.6687752250962654,
+            "b": 0.9033636688070161,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.4446339392987109,
+            "g": 0.6329344571791128,
+            "b": 0.9061143802295621,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:64",
+      "name": "core/info-500",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.4635935085225335,
+          "g": 0.5658231165817788,
+          "b": 0.8702155071531076,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.4667879900506104,
+          "g": 0.5220275427098631,
+          "b": 0.8506304624081623,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.4635935085225335,
+            "g": 0.5658231165817788,
+            "b": 0.8702155071531076,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.4667879900506104,
+            "g": 0.5220275427098631,
+            "b": 0.8506304624081623,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:65",
+      "name": "core/info-600",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.45343416337039527,
+          "g": 0.471655976987199,
+          "b": 0.817397865143824,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.44513395305721554,
+          "g": 0.4300140489987472,
+          "b": 0.8038221595975471,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.45343416337039527,
+            "g": 0.471655976987199,
+            "b": 0.817397865143824,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.44513395305721554,
+            "g": 0.4300140489987472,
+            "b": 0.8038221595975471,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:66",
+      "name": "core/info-700",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.3925904510559395,
+          "g": 0.4028774316143844,
+          "b": 0.7123459192557263,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.37920533644295273,
+          "g": 0.35373366978229503,
+          "b": 0.6941296434644965,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.3925904510559395,
+            "g": 0.4028774316143844,
+            "b": 0.7123459192557263,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.37920533644295273,
+            "g": 0.35373366978229503,
+            "b": 0.6941296434644965,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:67",
+      "name": "core/info-800",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.3082319780508841,
+          "g": 0.3304237846713999,
+          "b": 0.5700576189924451,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.2863625254606236,
+          "g": 0.2842888460287726,
+          "b": 0.5301113588697718,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.3082319780508841,
+            "g": 0.3304237846713999,
+            "b": 0.5700576189924451,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.2863625254606236,
+            "g": 0.2842888460287726,
+            "b": 0.5301113588697718,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:68",
+      "name": "core/info-900",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.2280258601004051,
+          "g": 0.28229665570510293,
+          "b": 0.4489805237980696,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.19760919620876144,
+          "g": 0.19252518293517537,
+          "b": 0.37834382469503186,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.2280258601004051,
+            "g": 0.28229665570510293,
+            "b": 0.4489805237980696,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.19760919620876144,
+            "g": 0.19252518293517537,
+            "b": 0.37834382469503186,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:3:69",
+      "name": "core/info-950",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "3:1": {
+          "r": -0.11369219159426852,
+          "g": 0.16570409846865453,
+          "b": 0.2596874210428864,
+          "a": 1
+        },
+        "3:2": {
+          "r": -0.1145042253342839,
+          "g": 0.10707560724031046,
+          "b": 0.23662171911385382,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "3:1": {
+          "resolvedValue": {
+            "r": -0.11369219159426852,
+            "g": 0.16570409846865453,
+            "b": 0.2596874210428864,
+            "a": 1
+          },
+          "alias": null
+        },
+        "3:2": {
+          "resolvedValue": {
+            "r": -0.1145042253342839,
+            "g": 0.10707560724031046,
+            "b": 0.23662171911385382,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}

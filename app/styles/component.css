@@ -2,6 +2,26 @@
   .foundation-button {
     @apply flex items-center justify-center gap-0.5 whitespace-nowrap select-none;
   }
+
+  .card-rounded {
+    border-radius: var(--card-rounded);
+  }
+
+  .box-rounded {
+    border-radius: var(--box-rounded);
+  }
+
+  .input-rounded {
+    border-radius: var(--input-rounded);
+  }
+  .input-rounded-sm {
+    border-radius: var(--input-rounded-sm);
+  }
+
+  .button-rounded {
+    border-radius: var(--button-rounded);
+  }
+
   /* Password Reset */
   input[type="password"]::-webkit-input-password-toggle-button {
     display: none;

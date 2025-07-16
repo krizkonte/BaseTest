@@ -19,7 +19,7 @@ const Card = React.forwardRef<HTMLDivElement, BaseCardProps>(
 
     const defaultProps = {
       ref,
-      className: "surface high rounded-lg border-thin shadow-sm",
+      className: "surface high border-thin shadow-sm card-rounded", // Para usar surface-subtle, passe className="surface-subtle ..." via prop
       children,
     };
 

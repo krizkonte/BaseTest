@@ -1,5 +1,15 @@
 /* Brand A: padrão do sistema */
 [data-brand="a"] {
+  /* Families */
+  --font-sans: "Nunito Sans", system-ui, -apple-system, sans-serif;
+  --font-monos: "JetBrains Mono Variable", "SF Mono", Consolas, monospace;
+
+  --box-rounded: var(--radius-4xl);
+  --card-rounded: var(--radius-xl);
+  --input-rounded: var(--radius-lg);
+  --input-rounded-sm: calc(var(--input-rounded) / 2);
+  --button-rounded: var(--radius-md);
+
   /* Neutral */
   --neutral-50: oklch(0.97 0.004 180);
   --neutral-100: oklch(0.95 0.005 180);
@@ -160,6 +170,16 @@ html.dark[data-brand="a"] {
 }
 
 [data-brand="b"] {
+  /* Families */
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-monos: "SF Mono", Consolas, monospace;
+
+  --box-rounded: var(--radius-lg);
+  --card-rounded: var(--radius-md);
+  --input-rounded: var(--radius-md);
+  --input-rounded-sm: calc(var(--input-rounded) / 2);
+  --button-rounded: var(--radius-sm);
+
   --neutral-50: oklch(0.962 0.004 272.314);
   --neutral-100: oklch(0.93 0.005 272.788);
   --neutral-200: oklch(0.87 0.01 274.039);

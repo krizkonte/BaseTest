@@ -22,42 +22,45 @@ import type { LucideIcon } from "lucide-react";
  * - iconOnly: Apenas ícone (sem texto)
  * - hasIcon: Ajusta padding quando há ícone à esquerda (pl-1)
  */
-const buttonVariants = cva("foundation-button interactive font-semibold", {
-  variants: {
-    variant: {
-      default: "surface-brand",
-      outline: "ghost border border-surface",
-      ghost: "ghost",
-      danger: "surface danger",
-      ghostDanger: "ghost danger",
+const buttonVariants = cva(
+  "foundation-button interactive font-semibold button-rounded",
+  {
+    variants: {
+      variant: {
+        default: "surface-accent intent-brand",
+        outline: "interactive-ghost border border-surface",
+        ghost: "interactive-ghost",
+        danger: "surface danger",
+        ghostDanger: "interactive-ghost danger",
+      },
+      size: {
+        md: "h-8 px-3",
+        sm: "h-6 px-2",
+        lg: "h-10.5 px-4.5",
+        icon: "size-8",
+      },
+      loading: {
+        true: "opacity-80 pointer-events-none pl-1",
+      },
+      fullWidth: {
+        true: "w-full",
+      },
+      iconOnly: {
+        true: "p-0",
+      },
+      hasIcon: {
+        sm: "pl-1",
+        default: "pl-2",
+        lg: "pl-3",
+        icon: "",
+      },
     },
-    size: {
-      md: "h-8 px-3 rounded-md",
-      sm: "h-6 px-2 rounded-md",
-      lg: "h-10.5 px-4.5 rounded-lg",
-      icon: "size-8",
+    defaultVariants: {
+      variant: "default",
+      size: "md",
     },
-    loading: {
-      true: "opacity-80 pointer-events-none pl-1",
-    },
-    fullWidth: {
-      true: "w-full",
-    },
-    iconOnly: {
-      true: "p-0",
-    },
-    hasIcon: {
-      sm: "pl-1",
-      default: "pl-2",
-      lg: "pl-3",
-      icon: "",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "md",
-  },
-});
+  }
+);
 
 export interface ButtonProps extends VariantProps<typeof buttonVariants> {
   render?: React.ReactNode;
